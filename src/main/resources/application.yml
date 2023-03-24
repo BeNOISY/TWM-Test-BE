@@ -3,4 +3,4 @@ spring:
     mongodb:
       database: TWMElectronics
       host: twmmongodb
-      port: 27020
+      port: 27017
