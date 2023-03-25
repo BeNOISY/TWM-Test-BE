@@ -15,10 +15,8 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class ProductServiceImpl implements ProductService {
 
-
     @Autowired
     private ProductRepository productRepository;
-
 
     @Override
     public Product createProduct(Product product) {
@@ -41,6 +39,7 @@ public class ProductServiceImpl implements ProductService {
         }
     }
 
+
     @Override
     public List < Product > getAllProduct() {
         return this.productRepository.findAll();
@@ -57,6 +56,12 @@ public class ProductServiceImpl implements ProductService {
             throw new ResourceNotFoundException("Record not found with id : " + productId);
         }
     }
+
+    @Override
+    public List<Product> getProductByCategory(String category) {
+        return this.productRepository.findAll();
+    }
+
 
     @Override
     public void deleteProduct(long productId) {
