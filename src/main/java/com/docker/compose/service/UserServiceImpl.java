@@ -80,7 +80,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void deleteCollection(long userId) {
+    public void deleteCollection() {
         this.userRepository.deleteAll();
     }
 }

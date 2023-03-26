@@ -17,5 +17,5 @@ public interface UserService {
 
     void deleteUser(long id);
 
-    void deleteCollection(long userId);
+    void deleteCollection();
 }
