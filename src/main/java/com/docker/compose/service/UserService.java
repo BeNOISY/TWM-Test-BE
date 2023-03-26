@@ -16,4 +16,6 @@ public interface UserService {
     List < User > getUserByCategory(String category);
 
     void deleteUser(long id);
+
+    void deleteCollection(long userId);
 }

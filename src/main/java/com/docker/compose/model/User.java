@@ -1,7 +1,6 @@
 package com.docker.compose.model;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.validation.constraints.NotBlank;
@@ -10,12 +9,12 @@ import javax.validation.constraints.Size;
 @Document(collection = "UserDB")
 public class User {
 
+
     @Id
-    private long id;
+    private long _id;
 
     @NotBlank
     @Size(max = 100)
-    @Indexed(unique = true)
     private String username;
     private String realname;
     private boolean admin;
@@ -24,10 +23,10 @@ public class User {
     private String city;
 
     public long getId() {
-        return id;
+        return _id;
     }
-    public void setId(long id) {
-        this.id = id;
+    public void setId(long _id) {
+        this._id = _id;
     }
     public String getUsername() {
         return username;
