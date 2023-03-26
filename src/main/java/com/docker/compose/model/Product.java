@@ -15,7 +15,6 @@ public class Product {
 
     @NotBlank
     @Size(max = 100)
-    @Indexed(unique = true)
     private String name;
     private String description;
 

@@ -10,8 +10,9 @@ import javax.validation.constraints.Size;
 @Document(collection = "UserDB")
 public class User {
 
+
     @Id
-    private long id;
+    private long _id;
 
     @NotBlank
     @Size(max = 100)
@@ -20,14 +21,14 @@ public class User {
     private String realname;
     private boolean admin;
     private String email;
-    private String adress;
+    private String address;
     private String city;
 
     public long getId() {
-        return id;
+        return _id;
     }
-    public void setId(long id) {
-        this.id = id;
+    public void setId(long _id) {
+        this._id = _id;
     }
     public String getUsername() {
         return username;
@@ -53,11 +54,11 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
-    public String getAdress() {
-        return adress;
+    public String getAddress() {
+        return address;
     }
-    public void setAdress(String adress) {
-        this.adress = adress;
+    public void setAddress(String address) {
+        this.address = address;
     }
     public String getCity() {
         return city;

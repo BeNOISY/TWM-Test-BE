@@ -48,4 +48,10 @@ public class ProductController {
         this.productService.deleteProduct(id);
         return HttpStatus.OK;
     }
+
+    @DeleteMapping("/products")
+    public HttpStatus deleteCollection() {
+        this.productService.deleteCollection();
+        return HttpStatus.OK;
+    }
 }

@@ -74,4 +74,9 @@ public class ProductServiceImpl implements ProductService {
         }
 
     }
+
+    @Override
+    public void deleteCollection() {
+        this.productRepository.deleteAll();
+    }
 }
