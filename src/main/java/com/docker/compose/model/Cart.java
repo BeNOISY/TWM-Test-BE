@@ -20,6 +20,7 @@ public class Cart {
     private String productId;
 
     private int price;
+    private long time;
 
     public long getId() {
         return id;
@@ -42,4 +43,10 @@ public class Cart {
 
     public void setPrice(int price) {this.price = price;}
     public int getPrice() {return price;}
+    public long getTime() {
+        return time;
+    }
+    public void setTime(long time) {
+        this.time = time;
+    }
 }

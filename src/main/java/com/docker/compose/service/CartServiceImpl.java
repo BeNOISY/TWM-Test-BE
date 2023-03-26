@@ -35,6 +35,7 @@ public class CartServiceImpl implements CartService{
             cartUpdate.setId(cart.getId());
             cartUpdate.setUsername(cart.getUsername());
             cartUpdate.setPrice(cart.getPrice());
+            cartUpdate.setTime(cart.getTime());
             cartUpdate.setProductId(cart.getProductId());
 
             cartRepository.save(cartUpdate);
