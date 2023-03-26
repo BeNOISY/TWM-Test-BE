@@ -44,7 +44,7 @@ public class UserController {
     }
 
     @DeleteMapping("/users")
-    public HttpStatus deleteCollection(@PathVariable long id) {
+    public HttpStatus deleteCollection() {
         this.userService.deleteCollection();
         return HttpStatus.OK;
     }
