@@ -1,7 +1,6 @@
 package com.docker.compose.model;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.validation.constraints.NotBlank;
@@ -16,8 +15,7 @@ public class Cart {
 
     @NotBlank
     @Size(max = 100)
-    @Indexed(unique = true)
-    private String username;
+    private String username;//user ID instead
 
     private String productId;
 

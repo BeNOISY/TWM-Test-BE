@@ -31,7 +31,27 @@ public class ProductServiceImpl implements ProductService {
             Product productUpdate = productDb.get();
             productUpdate.setId(product.getId());
             productUpdate.setName(product.getName());
+            productUpdate.setType(product.getType());
+            productUpdate.setPrice(product.getPrice());
+            productUpdate.setCount(product.getCount());
             productUpdate.setDescription(product.getDescription());
+            productUpdate.setCapacity(product.getCapacity());
+            productUpdate.setLifetime(product.getLifetime());
+            productUpdate.setDisktype(product.getDisktype());
+            productUpdate.setSeries(product.getSeries());
+            productUpdate.setCores(product.getCores());
+            productUpdate.setThreads(product.getThreads());
+            productUpdate.setSocket(product.getSocket());
+            productUpdate.setMemory(product.getMemory());
+            productUpdate.setPorts(product.getPorts());
+            productUpdate.setBacklight(product.getBacklight());
+            productUpdate.setSpeed(product.getSpeed());
+            productUpdate.setOs(product.getOs());
+            productUpdate.setPlug(product.getPlug());
+            productUpdate.setWatts(product.getWatts());
+            productUpdate.setModular(product.getModular());
+            productUpdate.setPins(product.getPins());
+            productUpdate.setCoolingtype(product.getCoolingtype());
             productRepository.save(productUpdate);
             return productUpdate;
         } else {
@@ -55,11 +75,6 @@ public class ProductServiceImpl implements ProductService {
         } else {
             throw new ResourceNotFoundException("Record not found with id : " + productId);
         }
-    }
-
-    @Override
-    public List<Product> getProductByCategory(String category) {
-        return this.productRepository.findAll();
     }
 
 

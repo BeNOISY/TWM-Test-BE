@@ -74,4 +74,9 @@ public class CartServiceImpl implements CartService{
         }
 
     }
+
+    @Override
+    public void deleteCollection() {
+        this.cartRepository.deleteAll();
+    }
 }

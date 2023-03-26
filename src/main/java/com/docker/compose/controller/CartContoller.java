@@ -43,4 +43,10 @@ public class CartContoller {
         this.cartService.deleteCart(id);
         return HttpStatus.OK;
     }
+
+    @DeleteMapping("/cart")
+    public HttpStatus deleteCollection() {
+        this.cartService.deleteCollection();
+        return HttpStatus.OK;
+    }
 }

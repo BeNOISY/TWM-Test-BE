@@ -14,4 +14,6 @@ public interface CartService {
     Cart getCartById(long productId);
 
     void deleteCart(long id);
+
+    void deleteCollection();
 }
