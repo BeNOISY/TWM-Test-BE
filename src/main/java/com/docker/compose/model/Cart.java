@@ -15,11 +15,11 @@ public class Cart {
 
     @NotBlank
     @Size(max = 100)
-    private String username;//user ID instead
+    private String userId;//user ID instead
 
     private String productId;
 
-    private int price;
+    private float price;
     private long time;
 
     public long getId() {
@@ -29,10 +29,10 @@ public class Cart {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getUserId() {
+        return userId;
     }
-    public void setUsername(String username) {this.username = username;}
+    public void setUserId(String userId) {this.userId = userId;}
 
     public String getProductId() {
         return productId;
@@ -41,8 +41,8 @@ public class Cart {
         this.productId = productId;
     }
 
-    public void setPrice(int price) {this.price = price;}
-    public int getPrice() {return price;}
+    public void setPrice(float price) {this.price = price;}
+    public float getPrice() {return price;}
     public long getTime() {
         return time;
     }

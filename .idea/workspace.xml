@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5bdcf147-1eb2-49d5-b7f2-954b81c8f7a4" name="Changes" comment="Products finalized, Cart edited">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/model/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/model/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/service/CartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/service/CartServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +107,7 @@
       <workItem from="1679783367140" duration="1976000" />
       <workItem from="1679846642439" duration="2966000" />
       <workItem from="1679851086500" duration="6007000" />
-      <workItem from="1679857127391" duration="828000" />
+      <workItem from="1679857127391" duration="2932000" />
     </task>
     <task id="LOCAL-00001" summary="Neviem kam pushujem :D">
       <created>1679572870605</created>
@@ -178,7 +179,21 @@
       <option name="project" value="LOCAL" />
       <updated>1679857281079</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Products finalized, Cart edited">
+      <created>1679858021604</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1679858021604</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Products finalized, Cart edited">
+      <created>1679858412771</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1679858412771</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
