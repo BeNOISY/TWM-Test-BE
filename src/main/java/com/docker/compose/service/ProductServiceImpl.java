@@ -37,7 +37,7 @@ public class ProductServiceImpl implements ProductService {
             productUpdate.setDescription(product.getDescription());
             productUpdate.setCapacity(product.getCapacity());
             productUpdate.setLifetime(product.getLifetime());
-            productUpdate.setDisktype(product.getDisktype());
+            productUpdate.setDisctype(product.getDisctype());
             productUpdate.setSeries(product.getSeries());
             productUpdate.setCores(product.getCores());
             productUpdate.setThreads(product.getThreads());

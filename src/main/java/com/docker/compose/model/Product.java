@@ -20,10 +20,10 @@ public class Product {
     private long count;
     private String description;
 
-    //    DISKY
+    //    DiscY
     private long capacity;
     private long lifetime;
-    private String disktype;
+    private String disctype;
 
     //    Procesory
     private String series;
@@ -100,11 +100,11 @@ public class Product {
     public void setLifetime(long lifetime) {
         this.lifetime = lifetime;
     }
-    public String getDisktype() {
-        return disktype;
+    public String getDisctype() {
+        return disctype;
     }
-    public void setDisktype(String disktype) {
-        this.disktype = disktype;
+    public void setDisctype(String disctype) {
+        this.disctype = disctype;
     }
     public String getSeries() {
         return series;
