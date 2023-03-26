@@ -13,8 +13,6 @@ public interface UserService {
 
     User getUserById(long userId);
 
-    List < User > getUserByCategory(String category);
-
     void deleteUser(long id);
 
     void deleteCollection();

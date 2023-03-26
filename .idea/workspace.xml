@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bdcf147-1eb2-49d5-b7f2-954b81c8f7a4" name="Changes" comment="Ajem dum fella">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/service/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/service/ProductServiceImpl.java" afterDir="false" />
+    <list default="true" id="5bdcf147-1eb2-49d5-b7f2-954b81c8f7a4" name="Changes" comment="Hopfuľi delete coll User a Product done">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/model/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +90,7 @@
       <workItem from="1679780624629" duration="2381000" />
       <workItem from="1679783058892" duration="15000" />
       <workItem from="1679783367140" duration="1976000" />
-      <workItem from="1679846642439" duration="2482000" />
+      <workItem from="1679846642439" duration="2966000" />
     </task>
     <task id="LOCAL-00001" summary="Neviem kam pushujem :D">
       <created>1679572870605</created>
@@ -144,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679848306067</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Hopfuľi delete coll User a Product done">
+      <created>1679849275551</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1679849275551</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +160,7 @@
     <MESSAGE value="Pridane Uprava - not blank" />
     <MESSAGE value="Delete Collection pridane do Userov" />
     <MESSAGE value="Ajem dum fella" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajem dum fella" />
+    <MESSAGE value="Hopfuľi delete coll User a Product done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hopfuľi delete coll User a Product done" />
   </component>
 </project>

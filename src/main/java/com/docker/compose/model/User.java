@@ -21,7 +21,7 @@ public class User {
     private String realname;
     private boolean admin;
     private String email;
-    private String adress;
+    private String address;
     private String city;
 
     public long getId() {
@@ -54,11 +54,11 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
-    public String getAdress() {
-        return adress;
+    public String getAddress() {
+        return address;
     }
-    public void setAdress(String adress) {
-        this.adress = adress;
+    public void setAddress(String address) {
+        this.address = address;
     }
     public String getCity() {
         return city;

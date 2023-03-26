@@ -34,7 +34,7 @@ public class UserServiceImpl implements UserService {
             userUpdate.setRealname(user.getRealname());
             userUpdate.setAdmin(user.getAdmin());
             userUpdate.setEmail(user.getEmail());
-            userUpdate.setAdress(user.getAdress());
+            userUpdate.setAddress(user.getAddress());
             userUpdate.setCity(user.getCity());
             userRepository.save(userUpdate);
             return userUpdate;
@@ -59,11 +59,6 @@ public class UserServiceImpl implements UserService {
         } else {
             throw new ResourceNotFoundException("Record not found with id : " + userId);
         }
-    }
-
-    @Override
-    public List<User> getUserByCategory(String category) {
-        return this.userRepository.findAll();
     }
 
 
