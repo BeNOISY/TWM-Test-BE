@@ -16,11 +16,11 @@ public class Product {
     @Size(max = 100)
     private String name;
     private String type;
-    private long price;
+    private float price;
     private long count;
     private String description;
 
-    //    DiscY
+    //    Disky
     private long capacity;
     private long lifetime;
     private String disctype;
@@ -70,10 +70,10 @@ public class Product {
     public void setType(String type) {
         this.type = type;
     }
-    public long getPrice() {
+    public float getPrice() {
         return price;
     }
-    public void setPrice(long price) {
+    public void setPrice(float price) {
         this.price = price;
     }
     public long getCount() {
