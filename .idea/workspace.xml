@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bdcf147-1eb2-49d5-b7f2-954b81c8f7a4" name="Changes" comment="Products finalized, Cart edited">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/repository/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/service/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/service/ProductServiceImpl.java" afterDir="false" />
+    <list default="true" id="5bdcf147-1eb2-49d5-b7f2-954b81c8f7a4" name="Changes" comment="Added Query">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +116,7 @@
       <workItem from="1679935701205" duration="918000" />
       <workItem from="1679937938548" duration="1158000" />
       <workItem from="1679939333536" duration="488000" />
-      <workItem from="1679945199071" duration="448000" />
+      <workItem from="1679945199071" duration="791000" />
     </task>
     <task id="LOCAL-00001" summary="Neviem kam pushujem :D">
       <created>1679572870605</created>
@@ -206,11 +202,29 @@
       <option name="project" value="LOCAL" />
       <updated>1679858412771</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Added Query">
+      <created>1679945763945</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1679945763945</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Neviem kam pushujem :D" />
@@ -220,6 +234,7 @@
     <MESSAGE value="Ajem dum fella" />
     <MESSAGE value="Hopfuľi delete coll User a Product done" />
     <MESSAGE value="Products finalized, Cart edited" />
-    <option name="LAST_COMMIT_MESSAGE" value="Products finalized, Cart edited" />
+    <MESSAGE value="Added Query" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Query" />
   </component>
 </project>
