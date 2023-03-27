@@ -23,7 +23,7 @@ public class ProductController {
         return ResponseEntity.ok().body(productService.getAllProduct());
     }
 
-    @GetMapping("/products/{type}")
+    @GetMapping("/products/type/{type}")
     public ResponseEntity < List <Product>> findProductByType(@PathVariable String type) {
         return ResponseEntity.ok().body(productService.getProductByType(type));
     }
