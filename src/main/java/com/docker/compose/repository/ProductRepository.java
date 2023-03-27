@@ -9,7 +9,7 @@ import java.util.List;
 
 @Repository
 public interface ProductRepository extends MongoRepository <Product, Long > {
-    @Query("{ 'type' : 'disc' }")
+    @Query("{ 'type' : type }")
     List<Product> findProductByType(String type);
 
 }
