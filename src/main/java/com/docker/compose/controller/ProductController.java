@@ -33,14 +33,6 @@ public class ProductController {
         return ResponseEntity.ok().body(productService.getProductById(id));
     }
 
-
-    @GetMapping("/products/category/{category}")
-    public ResponseEntity < List <Product>> getData(@RequestParam String category){
-        Query query = new Query();
-        query.addCriteria(Criteria.where("type").is(category));
-        return ResponseEntity.ok().body(productService.getProductByCategory(query));
-    }
-
     @PostMapping("/products")
     public ResponseEntity < Product > createProduct(@RequestBody Product product) {
         return ResponseEntity.ok().body(this.productService.createProduct(product));

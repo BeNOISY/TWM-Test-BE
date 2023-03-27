@@ -68,6 +68,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public List < Product > getProductByType(String type) {
+        System.out.println(type);
         return this.productRepository.findProductByType(type);
     }
 
@@ -83,10 +84,6 @@ public class ProductServiceImpl implements ProductService {
         }
     }
 
-    @Override
-    public List <Product> getProductByCategory(Query query){
-        return this.productRepository.findAll();
-    }
     @Override
     public void deleteProduct(long productId) {
         Optional < Product > productDb = this.productRepository.findById(productId);

@@ -16,8 +16,6 @@ public interface ProductService {
 
     Product getProductById(long productId);
 
-    List <Product> getProductByCategory(Query query);
-
     void deleteProduct(long id);
 
     void deleteCollection();
