@@ -9,6 +9,7 @@ import com.docker.compose.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.data.mongodb.core.query.Query;
 
 
 @Service
@@ -77,7 +78,10 @@ public class ProductServiceImpl implements ProductService {
         }
     }
 
-
+    @Override
+    public List <Product> getProductByCategory(Query query){
+        return this.productRepository.findAll();
+    }
     @Override
     public void deleteProduct(long productId) {
         Optional < Product > productDb = this.productRepository.findById(productId);
