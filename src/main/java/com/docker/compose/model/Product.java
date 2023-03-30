@@ -1,5 +1,7 @@
 package com.docker.compose.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
@@ -7,10 +9,12 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "ProductDB")
+@Entity
 public class Product {
 
     @Id
-    private long id;
+    @GeneratedValue
+    private long _id;
 
     @NotBlank
     @Size(max = 100)
@@ -53,10 +57,10 @@ public class Product {
 
 
     public long getId() {
-        return id;
+        return _id;
     }
     public void setId(long id) {
-        this.id = id;
+        this._id = id;
     }
     public String getName() {
         return name;
