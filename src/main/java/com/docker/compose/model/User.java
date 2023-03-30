@@ -10,12 +10,10 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 @Document(collection = "UserDB")
-@Entity
 public class User {
 
 
     @Id
-    @GeneratedValue
     private long _id;
 
     @NotBlank

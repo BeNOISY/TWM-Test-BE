@@ -10,11 +10,9 @@ import javax.validation.constraints.Size;
 
 
 @Document(collection = "CartDB")
-@Entity
 public class Cart {
 
     @Id
-    @GeneratedValue
     private long _id;
 
     @NotBlank

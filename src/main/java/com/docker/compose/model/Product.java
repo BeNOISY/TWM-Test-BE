@@ -9,11 +9,9 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "ProductDB")
-@Entity
 public class Product {
 
     @Id
-    @GeneratedValue
     private long _id;
 
     @NotBlank
