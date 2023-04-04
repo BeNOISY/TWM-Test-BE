@@ -1,4 +1,4 @@
-package com.docker.compose.model;
+package com.docker.compose.products.persistance.entity;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
@@ -8,10 +8,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "ProductDB")
 public class Product {
-
     @Id
     private long _id;
-
     @NotBlank
     @Size(max = 100)
     private String name;
@@ -42,11 +40,15 @@ public class Product {
     private long speed;
     private String os;
 
+
+
     //    Zdroj
     private String plug;
     private long watts;
     private boolean modular;
     private long pins;
+
+
 
     //    Chladenie
     private String coolingtype;

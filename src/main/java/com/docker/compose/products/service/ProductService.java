@@ -1,8 +1,7 @@
-package com.docker.compose.service;
-import com.docker.compose.model.Product;
+package com.docker.compose.products.service;
+import com.docker.compose.products.persistance.entity.Product;
 
 import java.util.List;
-import org.springframework.data.mongodb.core.query.Query;
 
 
 public interface ProductService {

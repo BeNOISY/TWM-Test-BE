@@ -1,4 +1,4 @@
-package com.docker.compose.model;
+package com.docker.compose.cart.persistance.entity;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -15,7 +15,7 @@ public class Cart {
 
     @NotBlank
     @Size(max = 100)
-    private String userId;//user ID instead
+    private String userId;//eshop.user ID instead
 
     private String productId;
 

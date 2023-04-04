@@ -1,7 +1,7 @@
-package com.docker.compose.controller;
+package com.docker.compose.cart.controller;
 
-import com.docker.compose.model.Cart;
-import com.docker.compose.service.CartService;
+import com.docker.compose.cart.service.CartService;
+import com.docker.compose.cart.persistance.entity.Cart;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

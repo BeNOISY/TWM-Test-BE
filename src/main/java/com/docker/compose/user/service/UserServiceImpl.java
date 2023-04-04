@@ -1,8 +1,8 @@
-package com.docker.compose.service;
+package com.docker.compose.user.service;
 
+import com.docker.compose.user.persistance.entity.User;
+import com.docker.compose.user.persistance.repository.UserRepository;
 import com.docker.compose.exception.ResourceNotFoundException;
-import com.docker.compose.model.User;
-import com.docker.compose.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

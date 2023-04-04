@@ -1,7 +1,7 @@
-package com.docker.compose.controller;
+package com.docker.compose.user.controller;
 
-import com.docker.compose.model.User;
-import com.docker.compose.service.UserService;
+import com.docker.compose.user.persistance.entity.User;
+import com.docker.compose.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

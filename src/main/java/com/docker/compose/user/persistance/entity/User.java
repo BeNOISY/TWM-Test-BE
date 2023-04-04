@@ -1,4 +1,4 @@
-package com.docker.compose.model;
+package com.docker.compose.user.persistance.entity;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;

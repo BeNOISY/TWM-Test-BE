@@ -1,5 +1,5 @@
-package com.docker.compose.service;
-import com.docker.compose.model.User;
+package com.docker.compose.user.service;
+import com.docker.compose.user.persistance.entity.User;
 
 import java.util.List;
 

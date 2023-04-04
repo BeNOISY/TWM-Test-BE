@@ -1,6 +1,6 @@
-package com.docker.compose.service;
+package com.docker.compose.cart.service;
 
-import com.docker.compose.model.Cart;
+import com.docker.compose.cart.persistance.entity.Cart;
 
 import java.util.List;
 

@@ -1,15 +1,14 @@
-package com.docker.compose.service;
+package com.docker.compose.products.service;
 
 import java.util.List;
 import java.util.Optional;
 
+import com.docker.compose.products.persistance.entity.Product;
+import com.docker.compose.products.persistance.repository.ProductRepository;
 import com.docker.compose.exception.ResourceNotFoundException;
-import com.docker.compose.model.Product;
-import com.docker.compose.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.data.mongodb.core.query.Query;
 
 
 @Service

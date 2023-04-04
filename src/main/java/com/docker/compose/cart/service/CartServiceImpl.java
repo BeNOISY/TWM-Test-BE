@@ -1,9 +1,9 @@
-package com.docker.compose.service;
+package com.docker.compose.cart.service;
 
 
 import com.docker.compose.exception.ResourceNotFoundException;
-import com.docker.compose.model.Cart;
-import com.docker.compose.repository.CartRepository;
+import com.docker.compose.cart.persistance.entity.Cart;
+import com.docker.compose.cart.persistance.repository.CartRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -14,7 +14,7 @@ import java.util.Optional;
 
 @Service
 @Transactional
-public class CartServiceImpl implements CartService{
+public class CartServiceImpl implements CartService {
 
     @Autowired
     private CartRepository cartRepository;
