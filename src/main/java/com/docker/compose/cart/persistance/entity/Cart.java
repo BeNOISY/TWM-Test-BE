@@ -3,8 +3,6 @@ package com.docker.compose.cart.persistance.entity;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
 
 
 @Document(collection = "CartDB")
@@ -13,8 +11,6 @@ public class Cart {
     @Id
     private long _id;
 
-    @NotBlank
-    @Size(max = 100)
     private String userId;//eshop.user ID instead
 
     private String productId;

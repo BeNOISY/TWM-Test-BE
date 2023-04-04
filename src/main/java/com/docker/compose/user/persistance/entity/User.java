@@ -5,10 +5,6 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
 
 @Document(collection = "ProductDB")
 public class User {
@@ -17,8 +13,6 @@ public class User {
     @Id
     private long _id;
 
-    @NotBlank
-    @Size(max = 100)
     @Indexed(unique = true)
     private String username;
     private String realname;
