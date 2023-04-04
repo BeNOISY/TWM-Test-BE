@@ -7,21 +7,7 @@
     <list default="true" id="5bdcf147-1eb2-49d5-b7f2-954b81c8f7a4" name="Changes" comment="Added Query">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/controller/CartContoller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/cart/controller/CartContoller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/products/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/user/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/model/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/cart/persistance/entity/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/products/persistance/entity/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/user/persistance/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/repository/CartRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/cart/persistance/repository/CartRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/products/persistance/repository/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/user/persistance/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/cart/service/CartService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/service/CartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/cart/service/CartServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/products/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/service/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/products/service/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/user/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/user/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/user/persistance/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/user/persistance/entity/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +80,11 @@
       <recent name="com.docker.compose.model" />
       <recent name="com.docker.compose.controller" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn " />
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="SpringbootMongodbDockerApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
