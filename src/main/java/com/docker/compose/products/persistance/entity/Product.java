@@ -91,7 +91,7 @@ public class Product {
         }
 
 
-        public void getByType(String type) {
+        public void setByType(String type) {
             switch (type) {
                 case "watts": {
                     this.setWatts(this.getWatts());
