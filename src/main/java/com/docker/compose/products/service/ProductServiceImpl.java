@@ -35,23 +35,7 @@ public class ProductServiceImpl implements ProductService {
             productUpdate.setPrice(product.getPrice());
             productUpdate.setCount(product.getCount());
             productUpdate.setDescription(product.getDescription());
-            productUpdate.setCapacity(product.getCapacity());
-            productUpdate.setLifetime(product.getLifetime());
-            productUpdate.setDisctype(product.getDisctype());
-            productUpdate.setSeries(product.getSeries());
-            productUpdate.setCores(product.getCores());
-            productUpdate.setThreads(product.getThreads());
-            productUpdate.setSocket(product.getSocket());
-            productUpdate.setMemory(product.getMemory());
-            productUpdate.setPorts(product.getPorts());
-            productUpdate.setBacklight(product.getBacklight());
-            productUpdate.setSpeed(product.getSpeed());
-            productUpdate.setOs(product.getOs());
-            productUpdate.setPlug(product.getPlug());
-            productUpdate.setWatts(product.getWatts());
-            productUpdate.setModular(product.getModular());
-            productUpdate.setPins(product.getPins());
-            productUpdate.setCoolingtype(product.getCoolingtype());
+            productUpdate.setImg(product.getImg());
             productRepository.save(productUpdate);
             return productUpdate;
         } else {

@@ -1,6 +1,5 @@
 package com.docker.compose.user.persistance.entity;
 
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -9,13 +8,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "ProductDB")
 public class User {
 
-
     @Id
     private long _id;
 
     @Indexed(unique = true)
     private String username;
-    private String realname;
+    private String realName;
     private boolean admin;
     private String email;
     private String address;
@@ -33,11 +31,11 @@ public class User {
     public void setUsername(String name) {
         this.username = name;
     }
-    public String getRealname() {
-        return realname;
+    public String getRealName() {
+        return realName;
     }
-    public void setRealname(String realname) {
-        this.realname = realname;
+    public void setRealName(String realName) {
+        this.realName = realName;
     }
     public boolean getAdmin() {
         return admin;
