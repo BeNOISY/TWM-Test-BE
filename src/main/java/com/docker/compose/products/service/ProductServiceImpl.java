@@ -54,8 +54,13 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public List < Product > getProductByType(String type) {
-        System.out.println(type);
-        return this.productRepository.findProductByType(type);
+        List<Product> productDb = this.productRepository.findProductByType(type);
+        if (productDb.isEmpty()) {
+            throw new ResourceNotFoundException("Record not found with type : " + type);
+        } else {
+            return this.productRepository.findProductByType(type);
+        }
+
     }
 
     @Override
