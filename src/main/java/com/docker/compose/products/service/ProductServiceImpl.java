@@ -36,17 +36,14 @@ public class ProductServiceImpl implements ProductService {
             productUpdate.setCount(product.getCount());
             productUpdate.setDescription(product.getDescription());
             productUpdate.setImg(product.getImg());
+            System.out.println(product.getType());
             switch (product.getType()){
                 case "PSU":{
                     productUpdate.setWatts(product.getWatts());
                 }
                 break;
-                case "something":{
-                    System.out.println("something");
-                }
-                break;
                 default:{
-
+                    System.out.println("Its in default");
                 }
             }
             productRepository.save(productUpdate);
