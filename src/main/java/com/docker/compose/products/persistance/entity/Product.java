@@ -8,7 +8,7 @@ public class Product {
     @Id
     private long id;
     private String name;
-    private String type;
+    public String type;
     private float price;
     private long count;
     private String description;
