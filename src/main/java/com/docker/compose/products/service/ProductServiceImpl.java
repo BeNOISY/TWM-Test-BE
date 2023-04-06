@@ -36,17 +36,9 @@ public class ProductServiceImpl implements ProductService {
             productUpdate.setCount(product.getCount());
             productUpdate.setDescription(product.getDescription());
             productUpdate.setImg(product.getImg());
-            switch (product.type) {
-                case "watts": {
-                    productUpdate.setWatts(product.getWatts());
-                }
-                break;
-                case "modular": {
-                    productUpdate.setModular(product.isModular());
-                }
-                default:{
-                }
-            }
+
+            productUpdate.getByType(product.getType());
+
             productRepository.save(productUpdate);
             return productUpdate;
         } else {

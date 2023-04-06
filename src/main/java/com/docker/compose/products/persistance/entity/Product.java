@@ -8,7 +8,7 @@ public class Product {
     @Id
     private long id;
     private String name;
-    public String type;
+    private String type;
     private float price;
     private long count;
     private String description;
@@ -88,5 +88,20 @@ public class Product {
 
         public void setModular(boolean modular) {
             this.modular = modular;
+        }
+
+
+        public void getByType(String type) {
+            switch (type) {
+                case "watts": {
+                    this.setWatts(this.getWatts());
+                }
+                break;
+                case "modular": {
+                    this.setModular(this.isModular());
+                }
+                default: {
+                }
+            }
         }
 }
