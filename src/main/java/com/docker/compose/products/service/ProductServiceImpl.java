@@ -39,6 +39,7 @@ public class ProductServiceImpl implements ProductService {
             System.out.println(product.getType());
             switch (product.getType()){
                 case "PSU":{
+                    System.out.println("Getting Wats");
                     productUpdate.setWatts(product.getWatts());
                 }
                 break;
