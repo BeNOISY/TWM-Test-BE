@@ -37,14 +37,15 @@ public class ProductServiceImpl implements ProductService {
             productUpdate.setDescription(product.getDescription());
             productUpdate.setImg(product.getImg());
             System.out.println(product.getType());
-            switch (product.getType()){
-                case "PSU":{
-                    System.out.println("Getting Wats");
+            switch (product.getType()) {
+                case "watts": {
                     productUpdate.setWatts(product.getWatts());
                 }
                 break;
+                case "modular": {
+                    productUpdate.setModular(product.isModular());
+                }
                 default:{
-                    System.out.println("Its in default");
                 }
             }
             productRepository.save(productUpdate);

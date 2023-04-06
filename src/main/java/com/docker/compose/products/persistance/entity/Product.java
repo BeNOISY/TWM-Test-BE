@@ -16,6 +16,7 @@ public class Product {
 
     //PSU
     private long watts;
+    private boolean modular;
 
 
 
@@ -47,7 +48,9 @@ public class Product {
             return watts;
         }
 
-
+        public boolean isModular() {
+            return modular;
+        }
 
 
 
@@ -55,20 +58,21 @@ public class Product {
     public void setId(long id) {
         this.id = id;
     }
+
     public void setName(String name) {
         this.name = name;
     }
-
     public void setType(String type) {
         this.type = type;
     }
+
     public void setPrice(float price) {
         this.price = price;
     }
-
     public void setCount(long count) {
         this.count = count;
     }
+
     public void setDescription(String description) {
         this.description = description;
     }
@@ -76,9 +80,13 @@ public class Product {
     public void setImg(String img) {
         this.img = img;
     }
+    //PSU
 
-        //PSU
         public void setWatts(long watts){
             this.watts = watts;
+        }
+
+        public void setModular(boolean modular) {
+            this.modular = modular;
         }
 }
