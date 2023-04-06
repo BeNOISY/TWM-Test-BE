@@ -3,7 +3,7 @@ echo Zaciatok reinit scriptu
 docker container ls
 echo pre potvrdenie manualne zadajte container pre potvrdenie:
 read Container
-dokcer stop $Container
+docker stop $Container
 docker container rm $Container
 docker image rm springboot-mongodb:6.0
 echo image a container uspecne vymazane pull z gitu:
