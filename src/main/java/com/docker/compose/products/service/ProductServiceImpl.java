@@ -27,7 +27,7 @@ public class ProductServiceImpl implements ProductService {
     public Product updateProduct(Product product) {
         Optional < Product > productDb = this.productRepository.findById(product.getId());
 
-        if (productDb.isPresent()) {
+        if (productDb.isPresent()){
             Product productUpdate = productDb.get();
             productUpdate.setId(product.getId());
             productUpdate.setName(product.getName());
@@ -36,6 +36,19 @@ public class ProductServiceImpl implements ProductService {
             productUpdate.setCount(product.getCount());
             productUpdate.setDescription(product.getDescription());
             productUpdate.setImg(product.getImg());
+            switch (product.getType()){
+                case "PSU":{
+                    productUpdate.setWatts(product.getWatts());
+                }
+                break;
+                case "something":{
+                    System.out.println("something");
+                }
+                break;
+                default:{
+
+                }
+            }
             productRepository.save(productUpdate);
             return productUpdate;
         } else {

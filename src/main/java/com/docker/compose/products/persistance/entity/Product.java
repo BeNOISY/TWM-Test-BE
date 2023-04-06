@@ -3,8 +3,6 @@ package com.docker.compose.products.persistance.entity;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.awt.*;
-
 @Document(collection = "ProductDB")
 public class Product {
     @Id
@@ -15,6 +13,9 @@ public class Product {
     private long count;
     private String description;
     private String img;
+
+    //PSU
+    private long watts;
 
 
 
@@ -41,6 +42,10 @@ public class Product {
     public String getImg() {
         return img;
     }
+        //PSU
+        public long getWatts(){
+            return watts;
+        }
 
 
 
@@ -71,4 +76,9 @@ public class Product {
     public void setImg(String img) {
         this.img = img;
     }
+
+        //PSU
+        public void setWatts(long watts){
+            this.watts = watts;
+        }
 }
