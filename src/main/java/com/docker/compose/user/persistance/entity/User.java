@@ -9,7 +9,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class User {
 
     @Id
-    @GeneratedValue
     private long id;
 
     @Indexed(unique = true)
