@@ -71,7 +71,15 @@ public class Product {
 
 
     public void setByType(String type){
-        psu.setWatts(psu.getWatts());
+        switch (type){
+            case "PSU":{
+                psu.setWatts(psu.getWatts());
+            }
+            break;
+            case "NIC":{
+
+            }
+        }
     }
 
 }
