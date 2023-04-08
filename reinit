@@ -1,6 +1,6 @@
 #!/bin/bash
 echo Zaciatok reinit scriptu
-docker container ls
+docker container ls -a
 echo pre potvrdenie manualne zadajte container pre potvrdenie:
 read Container
 docker stop $Container
