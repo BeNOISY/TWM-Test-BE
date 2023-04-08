@@ -15,8 +15,7 @@ public class Product {
     private String img;
 
     //PSU
-    private long watts;
-    private boolean modular;
+
 
 
 
@@ -43,14 +42,6 @@ public class Product {
     public String getImg() {
         return img;
     }
-        //PSU
-        public long getWatts(){
-            return watts;
-        }
-
-        public boolean isModular() {
-            return modular;
-        }
 
 
 
@@ -80,25 +71,16 @@ public class Product {
     public void setImg(String img) {
         this.img = img;
     }
-    //PSU
-
-        public void setWatts(long watts){
-            this.watts = watts;
-        }
-
-        public void setModular(boolean modular) {
-            this.modular = modular;
-        }
-
 
         public void setByType(String type) {
             switch (type) {
-                case "watts": {
-                    this.setWatts(this.getWatts());
+                case "PSU": {
+                    long wats;
+
                 }
                 break;
-                case "modular": {
-                    this.setModular(this.isModular());
+                case "something": {
+                    String something;
                 }
                 default: {
                 }
