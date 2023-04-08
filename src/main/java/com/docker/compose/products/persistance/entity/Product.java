@@ -5,6 +5,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "ProductDB")
 public class Product {
+    PSU psu;
     @Id
     private long id;
     private String name;
@@ -14,13 +15,9 @@ public class Product {
     private String description;
     private String img;
 
-    //PSU
-    private long watts;
 
 
-
-
-    //Getters ------------------------------
+    //Basic Getters ------------------------------
     public long getId() {
         return id;
     }
@@ -72,26 +69,31 @@ public class Product {
         this.img = img;
     }
 
-    public void setWatts(long watts){
+
+    public void setByType(String type){
+        psu.setWatts(psu.getWatts());
+    }
+
+}
+
+class PSU extends Product {
+    private long watts;
+    private long modular;
+
+
+    public long getWatts() {
+        return watts;
+    }
+
+    public void setWatts(long watts) {
         this.watts = watts;
     }
 
-    public long getWatts(){
-        return this.watts;
+    public long getModular() {
+        return modular;
     }
 
-        public void setByType(String type) {
-            switch (type) {
-                case "PSU": {
-                    setWatts(getWatts());
-                }
-                break;
-                case "something": {
-                    String something;
-                }
-                default: {
-                }
-            }
-        }
-
+    public void setModular(long modular) {
+        this.modular = modular;
+    }
 }
