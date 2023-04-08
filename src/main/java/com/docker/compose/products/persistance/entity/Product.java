@@ -15,7 +15,7 @@ public class Product {
     private String img;
 
     //PSU
-
+    private long watts;
 
 
 
@@ -72,11 +72,18 @@ public class Product {
         this.img = img;
     }
 
+    public void setWatts(long watts){
+        this.watts = watts;
+    }
+
+    public long getWatts(){
+        return this.watts;
+    }
+
         public void setByType(String type) {
             switch (type) {
                 case "PSU": {
-                    long wats;
-
+                    setWatts(getWatts());
                 }
                 break;
                 case "something": {
