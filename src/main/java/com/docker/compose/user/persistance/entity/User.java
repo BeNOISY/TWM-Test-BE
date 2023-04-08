@@ -1,15 +1,18 @@
 package com.docker.compose.user.persistance.entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-
+@Entity
 @Document(collection = "ProductDB")
 public class User {
 
     @Id
-    private long _id;
+    @GeneratedValue
+    private long id;
 
     @Indexed(unique = true)
     private String username;
@@ -20,10 +23,10 @@ public class User {
     private String city;
 
     public long getId() {
-        return _id;
+        return id;
     }
     public void setId(long _id) {
-        this._id = _id;
+        this.id = _id;
     }
     public String getUsername() {
         return username;
