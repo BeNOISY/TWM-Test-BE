@@ -1,12 +1,9 @@
 package com.docker.compose.user.persistance.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Entity
 @Document(collection = "ProductDB")
 public class User {
 
