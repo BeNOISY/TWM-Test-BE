@@ -5,10 +5,13 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.io.Serializable;
+
 @Document(collection = "ProductDB")
-public class User {
+public class User implements Serializable {
 
     @Id
+    @GeneratedValue
     private long id;
 
     @Indexed(unique = true)
@@ -22,8 +25,8 @@ public class User {
     public long getId() {
         return id;
     }
-    public void setId(long _id) {
-        this.id = _id;
+    public void setId(long id) {
+        this.id = id;
     }
     public String getUsername() {
         return username;
