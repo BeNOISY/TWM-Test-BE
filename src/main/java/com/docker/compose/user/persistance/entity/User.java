@@ -1,5 +1,6 @@
 package com.docker.compose.user.persistance.entity;
 
+import jakarta.persistence.GeneratedValue;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -8,6 +9,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class User {
 
     @Id
+    @GeneratedValue
     private long id;
 
     @Indexed(unique = true)
