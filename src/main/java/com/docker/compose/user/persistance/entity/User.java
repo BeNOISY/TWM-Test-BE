@@ -11,7 +11,7 @@ import java.io.Serializable;
 public class User implements Serializable {
 
     @Id
-    @GeneratedValue
+    @Indexed(unique = true)
     private long id;
 
     @Indexed(unique = true)
