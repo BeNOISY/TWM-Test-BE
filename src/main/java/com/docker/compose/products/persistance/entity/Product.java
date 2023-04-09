@@ -71,7 +71,7 @@ public class Product {
 }
 
 class PSU{
-    protected long watts;
+    public long watts;
 
     public long getWatts() {
         return watts;
