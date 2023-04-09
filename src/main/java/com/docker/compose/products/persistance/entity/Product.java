@@ -5,6 +5,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "ProductDB")
 public class Product {
+
+    PSU psu = new PSU();
+
     @Id
     private long id;
     private String name;
@@ -65,12 +68,10 @@ public class Product {
     public void setImg(String img) {
         this.img = img;
     }
-
-    PSU psu = new PSU();
 }
 
 class PSU{
-    private long watts;
+    protected long watts;
 
     public long getWatts() {
         return watts;
