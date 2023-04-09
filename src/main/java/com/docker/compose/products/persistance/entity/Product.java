@@ -69,7 +69,7 @@ public class Product {
 
     //SPECIFIC ----------------
     PSU psu = new PSU();
-    private final long watts = psu.watts;
+    private long watts = psu.watts;
 
 }
 
