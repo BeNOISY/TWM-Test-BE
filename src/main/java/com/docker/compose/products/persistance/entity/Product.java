@@ -72,8 +72,8 @@ public class Product {
     }
 
     //SPECIFIC ----------------
-    public void setSpecific(){
-        switch (getType()){
+    public void setSpecific(String type){
+        switch (type){
             case "PSU": {
                 setWatts(getWatts());
                 break;
