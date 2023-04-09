@@ -5,9 +5,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "ProductDB")
 public class Product {
-    PSU psu = new PSU();
-
-
     @Id
     private long id;
     private String name;
@@ -78,13 +75,11 @@ public class Product {
     public void setSpecific(){
         switch (getType()){
             case "PSU": {
-                psu.setWatts(psu.getWatts());
-                this.watts = psu.watts;
+                setWatts(getWatts());
                 break;
             }
             case "NIC":{
-                psu.setModular(psu.isModular());
-                this.modular = psu.modular;
+                setModular(isModular());
             }
             break;
             default:{
@@ -93,25 +88,19 @@ public class Product {
         }
     }
 
-}
-
-class PSU{
-    protected long watts;
-    protected boolean modular;
-
-    public boolean isModular(){
-        return modular;
-    }
-
-    public void setModular(boolean modular){
-        this.modular = modular;
-    }
-
     public long getWatts() {
         return watts;
     }
 
     public void setWatts(long watts) {
         this.watts = watts;
+    }
+
+    public boolean isModular() {
+        return modular;
+    }
+
+    public void setModular(boolean modular) {
+        this.modular = modular;
     }
 }
