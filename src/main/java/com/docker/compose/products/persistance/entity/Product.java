@@ -5,6 +5,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "ProductDB")
 public class Product {
+    PSU psu = new PSU();
+
 
     @Id
     private long id;
@@ -14,6 +16,11 @@ public class Product {
     private long count;
     private String description;
     private String img;
+
+    //SPECIFIC
+    //PSU
+    private long watts;
+    private boolean modular;
 
     //Basic Getters ------------------------------
     public long getId() {
@@ -68,13 +75,37 @@ public class Product {
     }
 
     //SPECIFIC ----------------
-    PSU psu = new PSU();
-    private long watts = psu.watts;
+    public void setSpecific(){
+        switch (getType()){
+            case "PSU": {
+                psu.setWatts(psu.getWatts());
+                this.watts = psu.watts;
+                break;
+            }
+            case "NIC":{
+                psu.setModular(psu.isModular());
+                this.modular = psu.modular;
+            }
+            break;
+            default:{
+
+            }
+        }
+    }
 
 }
 
 class PSU{
     protected long watts;
+    protected boolean modular;
+
+    public boolean isModular(){
+        return modular;
+    }
+
+    public void setModular(boolean modular){
+        this.modular = modular;
+    }
 
     public long getWatts() {
         return watts;
