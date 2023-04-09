@@ -66,5 +66,17 @@ public class Product {
         this.img = img;
     }
 
+    PSU psu = new PSU();
+}
 
+class PSU{
+    private long watts;
+
+    public long getWatts() {
+        return watts;
+    }
+
+    public void setWatts(long watts) {
+        this.watts = watts;
+    }
 }
