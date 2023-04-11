@@ -1,39 +1,41 @@
 package com.docker.compose.products.persistance.entity;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.aggregation.ArrayOperators;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.MongoId;
+import org.springframework.stereotype.Component;
 
-import javax.swing.text.html.Option;
-import java.util.Optional;
 
 @Document(collection = "ProductDB")
 public class Product {
 
-//    Specifics spec = new Specifics();
-//    public Product(){
-//        switch (this.getType()){
-//            case "PSU":
-//                spec.setModular(spec.isModular());
-//                spec.setPlug(spec.getPlug());
-//                spec.setPins(spec.getPins());
-//                spec.setWatts(spec.getWatts());
-//                long watts = spec.watts;
-//                boolean modular = spec.modular;
-//                String plug = spec.plug;
-//                long pins = spec.pins;
-//                break;
-//            case "NIC":
-//                break;
-//            case "disks":
-//                break;
-//            case "processors":
-//                break;
-//            case "motherboard":
-//                break;
-//            default:
-//        }
-//    }
+   Specifics spec = new Specifics();
+    public void setSpecs(String type){
+        switch (type){
+            case "PSU":
+                spec.setModular(spec.isModular());
+                spec.setPlug(spec.getPlug());
+                spec.setPins(spec.getPins());
+                spec.setWatts(spec.getWatts());
+                this.watts = spec.watts;
+                boolean modular = spec.modular;
+                String plug = spec.plug;
+                long pins = spec.pins;
+                break;
+            case "NIC":
+                break;
+            case "disks":
+                break;
+            case "processors":
+                break;
+            case "motherboard":
+                break;
+            default:
+        }
+    }
+
+
+    private long watts;
 
     @Id
     private long id;

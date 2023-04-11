@@ -21,6 +21,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Product createProduct(Product product) {
+        product.setSpecs(product.getType());
         return productRepository.save(product);
     }
 
