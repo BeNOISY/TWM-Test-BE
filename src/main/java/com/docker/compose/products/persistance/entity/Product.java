@@ -69,8 +69,8 @@ public class Product {
     }
 
     Specifics spec = new Specifics();
-    public void setSpec(String type){
-        switch (type){
+    public void setSpec(){
+        switch (getType()){
             case "PSU":
                 spec.setModular(spec.isModular());
                 spec.setPlug(spec.getPlug());
