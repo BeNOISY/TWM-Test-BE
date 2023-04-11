@@ -1,33 +1,39 @@
 package com.docker.compose.products.persistance.entity;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.aggregation.ArrayOperators;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import javax.swing.text.html.Option;
+import java.util.Optional;
 
 @Document(collection = "ProductDB")
 public class Product {
 
-    public Product(){
-        switch (this.getType()){
-            case "PSU":
-                spec.setModular(spec.isModular());
-                spec.setPlug(spec.getPlug());
-                spec.setPins(spec.getPins());
-                spec.setWatts(spec.getWatts());
-                long watts = spec.watts;
-                boolean modular = spec.modular;
-                String plug = spec.plug;
-                long pins = spec.pins;
-                break;
-            case "NIC":
-                break;
-            case "disks":
-                break;
-            case "processors":
-                break;
-            case "motherboard":
-                break;
-        }
-    }
+//    Specifics spec = new Specifics();
+//    public Product(){
+//        switch (this.getType()){
+//            case "PSU":
+//                spec.setModular(spec.isModular());
+//                spec.setPlug(spec.getPlug());
+//                spec.setPins(spec.getPins());
+//                spec.setWatts(spec.getWatts());
+//                long watts = spec.watts;
+//                boolean modular = spec.modular;
+//                String plug = spec.plug;
+//                long pins = spec.pins;
+//                break;
+//            case "NIC":
+//                break;
+//            case "disks":
+//                break;
+//            case "processors":
+//                break;
+//            case "motherboard":
+//                break;
+//            default:
+//        }
+//    }
 
     @Id
     private long id;
@@ -91,7 +97,7 @@ public class Product {
     public void setImg(String img) {
         this.img = img;
     }
-    Specifics spec = new Specifics();
+
 
 }
 
