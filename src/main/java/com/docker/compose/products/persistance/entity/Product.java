@@ -14,10 +14,6 @@ public class Product {
     private String description;
     private String img;
 
-    //SPECIFIC
-    //PSU
-    private long watts;
-    private boolean modular;
 
     //Basic Getters ------------------------------
     public long getId() {
@@ -71,19 +67,5 @@ public class Product {
         this.img = img;
     }
 
-    public long getWatts() {
-        return watts;
-    }
-
-    public void setWatts(long watts) {
-        this.watts = watts;
-    }
-
-    public boolean isModular() {
-        return modular;
-    }
-
-    public void setModular(boolean modular) {
-        this.modular = modular;
-    }
 }
+
