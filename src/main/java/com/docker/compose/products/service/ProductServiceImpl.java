@@ -36,7 +36,16 @@ public class ProductServiceImpl implements ProductService {
             productUpdate.setCount(product.getCount());
             productUpdate.setDescription(product.getDescription());
             productUpdate.setImg(product.getImg());
-            productUpdate.setSpecific(product.getType());
+            switch (product.getType()){
+                case "PSU":
+                    productUpdate.setWatts(product.getWatts());
+                break;
+                case "NIC":
+                    productUpdate.setModular(product.isModular());
+                break;
+                default:
+            }
+
             productRepository.save(productUpdate);
             return productUpdate;
         } else {

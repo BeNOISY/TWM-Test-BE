@@ -71,23 +71,6 @@ public class Product {
         this.img = img;
     }
 
-    //SPECIFIC ----------------
-    public void setSpecific(String type){
-        switch (type){
-            case "PSU": {
-                setWatts(getWatts());
-                break;
-            }
-            case "NIC":{
-                setModular(isModular());
-            }
-            break;
-            default:{
-
-            }
-        }
-    }
-
     public long getWatts() {
         return watts;
     }
