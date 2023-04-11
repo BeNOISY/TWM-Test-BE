@@ -21,7 +21,6 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Product createProduct(Product product) {
-        product.setSpec();
         return productRepository.save(product);
     }
 
@@ -38,8 +37,6 @@ public class ProductServiceImpl implements ProductService {
             productUpdate.setCount(product.getCount());
             productUpdate.setDescription(product.getDescription());
             productUpdate.setImg(product.getImg());
-
-            productUpdate.setSpec();
 
             productRepository.save(productUpdate);
             return productUpdate;
