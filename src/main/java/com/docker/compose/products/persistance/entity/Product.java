@@ -5,6 +5,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "ProductDB")
 public class Product {
+
     @Id
     private long id;
     private String name;
@@ -65,6 +66,30 @@ public class Product {
 
     public void setImg(String img) {
         this.img = img;
+    }
+
+    Specifics spec = new Specifics();
+    public void setSpec(String type){
+        switch (type){
+            case "PSU":
+                spec.setModular(spec.isModular());
+                spec.setPlug(spec.getPlug());
+                spec.setPins(spec.getPins());
+                spec.setWatts(spec.getWatts());
+                long watts = spec.watts;
+                boolean modular = spec.modular;
+                String plug = spec.plug;
+                long pins = spec.pins;
+                break;
+            case "NIC":
+                break;
+            case "disks":
+                break;
+            case "processors":
+                break;
+            case "motherboard":
+                break;
+        }
     }
 
 }

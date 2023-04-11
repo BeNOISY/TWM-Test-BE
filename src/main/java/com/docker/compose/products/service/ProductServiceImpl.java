@@ -3,7 +3,7 @@ package com.docker.compose.products.service;
 import java.util.List;
 import java.util.Optional;
 
-import com.docker.compose.products.persistance.entity.PSU;
+import com.docker.compose.products.persistance.entity.Specifics;
 import com.docker.compose.products.persistance.entity.Product;
 import com.docker.compose.products.persistance.repository.ProductRepository;
 import com.docker.compose.exception.ResourceNotFoundException;
@@ -21,16 +21,6 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Product createProduct(Product product) {
-        PSU psu = new PSU();
-        switch (product.getType()){
-            case "PSU":
-                psu.setWatts(psu.getWatts());
-                break;
-            case "NIC":
-                psu.setModular(psu.isModular());
-                break;
-            default:
-        }
         return productRepository.save(product);
     }
 
