@@ -21,7 +21,7 @@ public class SpringbootMongodbDockerApplication {
 	@Bean
 	CommandLineRunner runner(UserRepository repository, MongoTemplate mongoTemplate){
 		return args -> {
-			String username = "Yondaime";
+			String username = "YondaimePrime";
 			User yondaime = new User(
 					username,
 					"Simon baranec",
