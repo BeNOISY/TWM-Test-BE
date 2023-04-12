@@ -1,6 +1,8 @@
-package com.docker.compose.products.persistance.entities;
+package com.docker.compose.products.persistance.dump;
 
-public class Disk extends Product{
+import com.docker.compose.products.persistance.entities.Product;
+
+public class Disk extends Product {
 
     private long capacity;
     private long lifetime;

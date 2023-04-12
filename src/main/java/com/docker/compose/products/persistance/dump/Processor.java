@@ -1,6 +1,8 @@
-package com.docker.compose.products.persistance.entities;
+package com.docker.compose.products.persistance.dump;
 
-public class Processor extends Product{
+import com.docker.compose.products.persistance.entities.Product;
+
+public class Processor extends Product {
 
     private String serie;
     private long cores;

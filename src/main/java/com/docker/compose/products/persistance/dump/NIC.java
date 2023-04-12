@@ -1,6 +1,8 @@
-package com.docker.compose.products.persistance.entities;
+package com.docker.compose.products.persistance.dump;
 
-public class NIC extends Product{
+import com.docker.compose.products.persistance.entities.Product;
+
+public class NIC extends Product {
 
     //NIC
     private String nicPorts;

@@ -1,6 +1,8 @@
-package com.docker.compose.products.persistance.entities;
+package com.docker.compose.products.persistance.dump;
 
-public class Motherboard extends Product{
+import com.docker.compose.products.persistance.entities.Product;
+
+public class Motherboard extends Product {
 
     //MotherBoard
     private String mbSocket;

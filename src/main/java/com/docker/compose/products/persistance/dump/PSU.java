@@ -1,8 +1,9 @@
-package com.docker.compose.products.persistance.entities;
+package com.docker.compose.products.persistance.dump;
 
 
-public class PSU extends Product{
+import com.docker.compose.products.persistance.entities.Product;
 
+public class PSU extends Product {
 
     private String plug;
     private long pins;
