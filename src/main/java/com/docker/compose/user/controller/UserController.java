@@ -12,35 +12,35 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("api/users")
+@RequestMapping("/users")
 @AllArgsConstructor
 public class UserController {
 
     @Autowired
     private final UserService userService;
 
-    @GetMapping("/users")
+    @GetMapping
     public ResponseEntity < List <User>> getAllUser() {
         return ResponseEntity.ok().body(userService.getAllUser());
     }
 
-    @GetMapping("/users/{id}")
+    @GetMapping
     public ResponseEntity < User > getUserById(@PathVariable String id) {
         return ResponseEntity.ok().body(userService.getUserById(id));
     }
 
-    @PostMapping("/users")
+    @PostMapping
     public ResponseEntity < User > createUser(@RequestBody User user) {
         return ResponseEntity.ok().body(this.userService.createUser(user));
     }
 
-    @PutMapping("/users/{id}")
+    @PutMapping
     public ResponseEntity < User > updateUser(@PathVariable String id, @RequestBody User user) {
         user.setId(id);
         return ResponseEntity.ok().body(this.userService.updateUser(user));
     }
 
-    @DeleteMapping("/users/{id}")
+    @DeleteMapping
     public HttpStatus deleteUser(@PathVariable String id) {
         this.userService.deleteUser(id);
         return HttpStatus.OK;
