@@ -2,6 +2,7 @@ package com.docker.compose.user.controller;
 
 import com.docker.compose.user.persistance.entity.User;
 import com.docker.compose.user.service.UserService;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,9 +12,12 @@ import java.util.List;
 
 
 @RestController
+@RequestMapping("api/users")
+@AllArgsConstructor
 public class UserController {
+
     @Autowired
-    private UserService userService;
+    private final UserService userService;
 
     @GetMapping("/users")
     public ResponseEntity < List <User>> getAllUser() {
