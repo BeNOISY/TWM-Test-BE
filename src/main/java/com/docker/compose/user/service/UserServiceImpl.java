@@ -26,14 +26,14 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User updateUser(User user) {
-        Optional < User > userDb = this.userRepository.findById(user.getId());
+        Optional < User > userDb = this.userRepository.findById((user.getId()));
 
         if (userDb.isPresent()) {
             User userUpdate = userDb.get();
             userUpdate.setId(user.getId());
             userUpdate.setUsername(user.getUsername());
             userUpdate.setRealName(user.getRealName());
-            userUpdate.setAdmin(user.getAdmin());
+            userUpdate.setAdmin(user.isAdmin());
             userUpdate.setEmail(user.getEmail());
             userUpdate.setAddress(user.getAddress());
             userUpdate.setCity(user.getCity());
@@ -51,7 +51,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User getUserById(long userId) {
+    public User getUserById(String userId) {
 
         Optional < User > userDb = this.userRepository.findById(userId);
 
@@ -64,7 +64,7 @@ public class UserServiceImpl implements UserService {
 
 
     @Override
-    public void deleteUser(long userId) {
+    public void deleteUser(String userId) {
         Optional < User > userDb = this.userRepository.findById(userId);
 
         if (userDb.isPresent()) {
