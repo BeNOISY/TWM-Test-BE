@@ -30,16 +30,21 @@ public class SpringbootMongodbDockerApplication {
 					"Prirodna 37",
 					"Nova Bana"
 			);
-
-			Query query = new Query();
-			query.addCriteria(Criteria.where("username").is(username));
-
-			List<User> users = mongoTemplate.find(query, User.class);
-
-			if(users.isEmpty()){
-				repository.insert(user);
-			}
+			repository.findUserByUsername(username).ifPresentOrElse(u -> {
+				throw new IllegalStateException("User with same name already exist");
+			}, () ->{repository.insert(user);});
 		};
+	}
+
+	private void method(UserRepository repository, MongoTemplate mongoTemplate,String username,User user){
+		Query query = new Query();
+		query.addCriteria(Criteria.where("username").is(username));
+
+		List<User> users = mongoTemplate.find(query, User.class);
+
+		if(users.isEmpty()){
+			repository.insert(user);
+		}
 	}
 
 }
