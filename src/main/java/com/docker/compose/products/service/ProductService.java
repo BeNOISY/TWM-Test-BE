@@ -1,8 +1,7 @@
 package com.docker.compose.products.service;
-import com.docker.compose.products.persistance.entities.Product;
+import com.docker.compose.products.persistance.entity.Product;
 
 import java.util.List;
-
 
 
 public interface ProductService {
@@ -12,11 +11,11 @@ public interface ProductService {
 
     List < Product > getAllProduct();
 
-    List < Product > getProductByType(String type);
+    List<Product> getProductByType(String type);
 
-    Product getProductById(long productId);
+    Product getProductById(String productId);
 
-    void deleteProduct(long id);
+    void deleteProduct(String id);
 
     void deleteCollection();
 }

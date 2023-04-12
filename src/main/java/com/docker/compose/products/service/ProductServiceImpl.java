@@ -1,14 +1,14 @@
 package com.docker.compose.products.service;
 
-import java.util.List;
-import java.util.Optional;
-
-import com.docker.compose.products.persistance.entities.Product;
-import com.docker.compose.products.persistance.repository.ProductRepository;
 import com.docker.compose.exception.ResourceNotFoundException;
+import com.docker.compose.products.persistance.entity.Product;
+import com.docker.compose.products.persistance.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+import java.util.Optional;
 
 
 @Service
@@ -50,13 +50,15 @@ public class ProductServiceImpl implements ProductService {
         return this.productRepository.findAll();
     }
 
-    @Override
-    public List < Product > getProductByType(String type) {
-        return this.productRepository.findProductByType(type);
-    }
 
     @Override
-    public Product getProductById(long productId) {
+    public List<Product> getProductByType(String type) {
+        return productRepository.findProductsByType(type);
+    }
+
+
+    @Override
+    public Product getProductById(String productId) {
 
         Optional < Product > productDb = this.productRepository.findById(productId);
 
@@ -68,7 +70,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public void deleteProduct(long productId) {
+    public void deleteProduct(String productId) {
         Optional < Product > productDb = this.productRepository.findById(productId);
 
         if (productDb.isPresent()) {

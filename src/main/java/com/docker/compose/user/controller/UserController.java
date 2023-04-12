@@ -19,7 +19,7 @@ public class UserController {
     private final UserService userService;
 
     @GetMapping("/users")
-    public ResponseEntity < List <User>> getAllUser() {
+    public ResponseEntity < List <User>> getAllUsers() {
         return ResponseEntity.ok().body(userService.getAllUser());
     }
 
@@ -46,7 +46,7 @@ public class UserController {
     }
 
     @DeleteMapping("/users")
-    public HttpStatus deleteCollection() {
+    public HttpStatus deleteAllUsers() {
         this.userService.deleteCollection();
         return HttpStatus.OK;
     }
