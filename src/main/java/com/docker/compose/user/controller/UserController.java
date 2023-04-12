@@ -12,35 +12,34 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/users")
 @AllArgsConstructor
 public class UserController {
 
     @Autowired
     private final UserService userService;
 
-    @GetMapping
+    @GetMapping("/users")
     public ResponseEntity < List <User>> getAllUser() {
         return ResponseEntity.ok().body(userService.getAllUser());
     }
 
-    @GetMapping
+    @GetMapping("/users/{id}")
     public ResponseEntity < User > getUserById(@PathVariable String id) {
         return ResponseEntity.ok().body(userService.getUserById(id));
     }
 
-    @PostMapping
+    @PostMapping("/users")
     public ResponseEntity < User > createUser(@RequestBody User user) {
         return ResponseEntity.ok().body(this.userService.createUser(user));
     }
 
-    @PutMapping
+    @PutMapping("/users/{id}")
     public ResponseEntity < User > updateUser(@PathVariable String id, @RequestBody User user) {
         user.setId(id);
         return ResponseEntity.ok().body(this.userService.updateUser(user));
     }
 
-    @DeleteMapping
+    @DeleteMapping("/users/{id}")
     public HttpStatus deleteUser(@PathVariable String id) {
         this.userService.deleteUser(id);
         return HttpStatus.OK;
