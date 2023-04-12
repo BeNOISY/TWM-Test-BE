@@ -6,6 +6,11 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
+
+import java.util.List;
 
 @SpringBootApplication
 public class SpringbootMongodbDockerApplication {
@@ -14,17 +19,30 @@ public class SpringbootMongodbDockerApplication {
 	}
 
 	@Bean
-	CommandLineRunner runner(UserRepository repository){
+	CommandLineRunner runner(UserRepository repository, MongoTemplate mongoTemplate){
 		return args -> {
-			User user = new User(
-					"Yondaime",
+			String username = "Yondaime";
+			User yondaime = new User(
+					username,
 					"Simon baranec",
 					true,
 					"simonbaranec58@gmail.com",
 					"prirodna 37",
 					"Nova Bana"
 			);
-			repository.insert(user);
+
+			Query query = new Query();
+			query.addCriteria(Criteria.where("username").is(username));
+
+			List<User> users = mongoTemplate.find(query, User.class);
+
+			if(users.size() > 1){
+				throw new IllegalStateException("User with this username already exist");
+			}
+			if(users.isEmpty()){
+				repository.insert(yondaime);
+			}
+
 		};
 	}
 
