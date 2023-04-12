@@ -3,8 +3,7 @@ package com.docker.compose.products.service;
 import java.util.List;
 import java.util.Optional;
 
-import com.docker.compose.products.persistance.entity.Specifics;
-import com.docker.compose.products.persistance.entity.Product;
+import com.docker.compose.products.persistance.entities.Product;
 import com.docker.compose.products.persistance.repository.ProductRepository;
 import com.docker.compose.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +20,6 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Product createProduct(Product product) {
-        product.setSpecs(product.getType());
         return productRepository.save(product);
     }
 
@@ -37,8 +35,6 @@ public class ProductServiceImpl implements ProductService {
             productUpdate.setPrice(product.getPrice());
             productUpdate.setCount(product.getCount());
             productUpdate.setDescription(product.getDescription());
-
-            productUpdate.setSpecs(product.getType());
 
             productUpdate.setImg(product.getImg());
 

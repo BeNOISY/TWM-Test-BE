@@ -1,5 +1,5 @@
 package com.docker.compose.products.service;
-import com.docker.compose.products.persistance.entity.Product;
+import com.docker.compose.products.persistance.entities.Product;
 
 import java.util.List;
 

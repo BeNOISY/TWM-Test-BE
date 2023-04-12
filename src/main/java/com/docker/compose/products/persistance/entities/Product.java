@@ -1,41 +1,11 @@
-package com.docker.compose.products.persistance.entity;
+package com.docker.compose.products.persistance.entities;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.MongoId;
-import org.springframework.stereotype.Component;
 
 
 @Document(collection = "ProductDB")
 public class Product {
-
-   Specifics spec = new Specifics();
-    public void setSpecs(String type){
-        switch (type){
-            case "PSU":
-                spec.setModular(spec.isModular());
-                spec.setPlug(spec.getPlug());
-                spec.setPins(spec.getPins());
-                spec.setWatts(spec.getWatts());
-                this.watts = spec.watts;
-                boolean modular = spec.modular;
-                String plug = spec.plug;
-                long pins = spec.pins;
-                break;
-            case "NIC":
-                break;
-            case "disks":
-                break;
-            case "processors":
-                break;
-            case "motherboard":
-                break;
-            default:
-        }
-    }
-
-
-    private long watts;
 
     @Id
     private long id;

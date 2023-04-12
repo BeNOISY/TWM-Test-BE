@@ -2,7 +2,7 @@ package com.docker.compose.products.controller;
 
 import java.util.List;
 
-import com.docker.compose.products.persistance.entity.Product;
+import com.docker.compose.products.persistance.entities.Product;
 import com.docker.compose.products.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
