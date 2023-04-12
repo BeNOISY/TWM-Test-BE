@@ -6,6 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="5bdcf147-1eb2-49d5-b7f2-954b81c8f7a4" name="Changes" comment="Added Query">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/products/persistance/entities/Disk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/products/persistance/dump/Disk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/products/persistance/entities/Motherboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/products/persistance/dump/Motherboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/products/persistance/entities/NIC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/products/persistance/dump/NIC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/products/persistance/entities/PSU.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/products/persistance/dump/PSU.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/products/persistance/entities/Processor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/products/persistance/dump/Processor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/products/persistance/entities/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/products/persistance/entities/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/products/persistance/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/products/persistance/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/products/service/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/products/service/ProductServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
