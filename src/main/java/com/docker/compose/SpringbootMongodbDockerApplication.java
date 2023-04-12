@@ -21,13 +21,13 @@ public class SpringbootMongodbDockerApplication {
 	@Bean
 	CommandLineRunner runner(UserRepository repository, MongoTemplate mongoTemplate){
 		return args -> {
-			String username = "YondaimePrime";
-			User yondaime = new User(
+			String username = "Yondaime";
+			User user = new User(
 					username,
-					"Simon baranec",
+					"Simon Baranec",
 					true,
 					"simonbaranec58@gmail.com",
-					"prirodna 37",
+					"Prirodna 37",
 					"Nova Bana"
 			);
 
@@ -36,13 +36,7 @@ public class SpringbootMongodbDockerApplication {
 
 			List<User> users = mongoTemplate.find(query, User.class);
 
-			if(users.size() > 1){
-				throw new IllegalStateException("User with this username already exist");
-			}
-			if(users.isEmpty()){
-				repository.insert(yondaime);
-			}
-
+			repository.insert(user);
 		};
 	}
 
