@@ -5,16 +5,16 @@ import com.docker.compose.products.persistance.entities.Product;
 public class NIC extends Product {
 
     //NIC
-    private String nicPorts;
+    private String ports;
     private long maxSpeed;
     private String os;
 
-    public String getNicPorts() {
-        return nicPorts;
+    public String getPorts() {
+        return ports;
     }
 
-    public void setNicPorts(String nicPorts) {
-        this.nicPorts = nicPorts;
+    public void setPorts(String ports) {
+        this.ports = ports;
     }
 
     public long getMaxSpeed() {

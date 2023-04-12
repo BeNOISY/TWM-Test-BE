@@ -7,7 +7,7 @@ public class Processor extends Product {
     private String serie;
     private long cores;
     private long threads;
-    private String prcSocket;
+    private String socket;
 
 
     public String getSerie() {
@@ -34,11 +34,11 @@ public class Processor extends Product {
         this.threads = threads;
     }
 
-    public String getPrcSocket() {
-        return prcSocket;
+    public String getSocket() {
+        return socket;
     }
 
-    public void setPrcSocket(String prcSocket) {
-        this.prcSocket = prcSocket;
+    public void setSocket(String socket) {
+        this.socket = socket;
     }
 }

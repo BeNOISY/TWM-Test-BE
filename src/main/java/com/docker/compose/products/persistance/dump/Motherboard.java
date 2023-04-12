@@ -5,25 +5,23 @@ import com.docker.compose.products.persistance.entities.Product;
 public class Motherboard extends Product {
 
     //MotherBoard
-    private String mbSocket;
-    private String mbPorts;
+    private String socket;
+    private String ports;
     private boolean backlight;
 
 
-    public String getMbSocket() {
-        return mbSocket;
+    public String getSocket() {return socket;}
+
+    public void setSocket(String socket) {
+        this.socket = socket;
     }
 
-    public void setMbSocket(String mbSocket) {
-        this.mbSocket = mbSocket;
+    public String getPorts() {
+        return ports;
     }
 
-    public String getMbPorts() {
-        return mbPorts;
-    }
-
-    public void setMbPorts(String mbPorts) {
-        this.mbPorts = mbPorts;
+    public void setPorts(String ports) {
+        this.ports = ports;
     }
 
     public boolean isBacklight() {
