@@ -16,4 +16,18 @@ public class User{
     private String email;
     private String address;
     private String city;
+
+    public User(String username,
+                String realName,
+                boolean admin,
+                String email,
+                String address,
+                String city) {
+        this.username = username;
+        this.realName = realName;
+        this.admin = admin;
+        this.email = email;
+        this.address = address;
+        this.city = city;
+    }
 }
