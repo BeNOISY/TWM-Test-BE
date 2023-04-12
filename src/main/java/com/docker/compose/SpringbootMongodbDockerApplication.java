@@ -30,9 +30,7 @@ public class SpringbootMongodbDockerApplication {
 					"Prirodna 37",
 					"Nova Bana"
 			);
-			repository.findUserByUsername(username).ifPresentOrElse(u -> {
-				throw new IllegalStateException("User with same name already exist");
-			}, () ->{repository.insert(user);});
+
 		};
 	}
 

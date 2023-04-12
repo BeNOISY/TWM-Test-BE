@@ -44,6 +44,20 @@ public class UserServiceImpl implements UserService {
         }
     }
 
+    public void getUserByUsername(){
+        String username = "Yondaime";
+        User user = new User(
+                username,
+                "Simon Baranec",
+                true,
+                "simonbaranec58@gmail.com",
+                "Prirodna 37",
+                "Nova Bana"
+        );
+        userRepository.getUserByUsername(username).ifPresentOrElse(u -> {
+            throw new IllegalStateException("User with same name already exist");
+        }, () ->{userRepository.insert(user);});
+    }
 
     @Override
     public List < User > getAllUser() {
