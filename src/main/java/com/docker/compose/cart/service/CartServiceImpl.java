@@ -33,10 +33,10 @@ public class CartServiceImpl implements CartService {
             Cart cartUpdate = cartDb.get();
 
             cartUpdate.setId(cart.getId());
-            cartUpdate.setUserId(cart.getUserId());
-            cartUpdate.setPrice(cart.getPrice());
+            cartUpdate.setUser(cart.getUser());
+            cartUpdate.setFinalPrice(cart.getFinalPrice());
             cartUpdate.setTime(cart.getTime());
-            cartUpdate.setProductId(cart.getProductId());
+            cartUpdate.setProducts(cart.getProducts());
 
             cartRepository.save(cartUpdate);
             return cartUpdate;
@@ -52,7 +52,7 @@ public class CartServiceImpl implements CartService {
     }
 
     @Override
-    public Cart getCartById(long cartId) {
+    public Cart getCartById(String cartId) {
 
         Optional < Cart > cartDb = this.cartRepository.findById(cartId);
 
@@ -65,7 +65,7 @@ public class CartServiceImpl implements CartService {
 
 
     @Override
-    public void deleteCart(long cartId) {
+    public void deleteCart(String cartId) {
         Optional < Cart > cartDb = this.cartRepository.findById(cartId);
 
         if (cartDb.isPresent()) {

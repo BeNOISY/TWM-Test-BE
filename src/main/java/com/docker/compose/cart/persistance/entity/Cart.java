@@ -1,48 +1,23 @@
 package com.docker.compose.cart.persistance.entity;
 
+import com.docker.compose.products.persistance.entity.Product;
+import com.docker.compose.user.persistance.entity.User;
+import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.List;
 
 
-@Document(collection = "CartDB")
+@Data
+@Document
 public class Cart {
 
     @Id
-    private long _id;
-
-    private String userId;//eshop.user ID instead
-
-    private String productId;
-
-    private float price;
+    private String id;
+    private User user;
+    private List<Product> products;
+    private float finalPrice;
     private long time;
 
-    public long getId() {
-        return _id;
-    }
-    public void setId(long id) {
-        this._id = id;
-    }
-
-    public String getUserId() {
-        return userId;
-    }
-    public void setUserId(String userId) {this.userId = userId;}
-
-    public String getProductId() {
-        return productId;
-    }
-    public void setProductId(String productId) {
-        this.productId = productId;
-    }
-
-    public void setPrice(float price) {this.price = price;}
-    public float getPrice() {return price;}
-    public long getTime() {
-        return time;
-    }
-    public void setTime(long time) {
-        this.time = time;
-    }
 }

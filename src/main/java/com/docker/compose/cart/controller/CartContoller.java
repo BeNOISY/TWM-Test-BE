@@ -23,7 +23,7 @@ public class CartContoller {
     }
 
     @GetMapping("/cart/{id}")
-    public ResponseEntity < Cart > getCartId(@PathVariable long id) {
+    public ResponseEntity < Cart > getCartId(@PathVariable String id) {
         return ResponseEntity.ok().body(cartService.getCartById(id));
     }
 
@@ -33,13 +33,13 @@ public class CartContoller {
     }
 
     @PutMapping("/cart/{id}")
-    public ResponseEntity < Cart > updateCart(@PathVariable long id, @RequestBody Cart cart) {
+    public ResponseEntity < Cart > updateCart(@PathVariable String id, @RequestBody Cart cart) {
         cart.setId(id);
         return ResponseEntity.ok().body(this.cartService.updateCart(cart));
     }
 
     @DeleteMapping("/cart/{id}")
-    public HttpStatus deleteCart(@PathVariable long id) {
+    public HttpStatus deleteCart(@PathVariable String id) {
         this.cartService.deleteCart(id);
         return HttpStatus.OK;
     }
