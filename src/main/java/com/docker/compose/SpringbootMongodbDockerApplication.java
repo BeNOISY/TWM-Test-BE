@@ -9,6 +9,4 @@ public class SpringbootMongodbDockerApplication {
 		SpringApplication.run
 				(SpringbootMongodbDockerApplication.class, args);
 	}
-
-
 }

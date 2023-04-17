@@ -28,6 +28,11 @@ public class UserController {
         return ResponseEntity.ok().body(userService.getUserById(id));
     }
 
+    @GetMapping("users/email:{email}")
+    public ResponseEntity <User> getUserByEmail(@PathVariable String email){
+        return ResponseEntity.ok().body(userService.findUserByEmail(email));
+    }
+
     @PostMapping("/users")
     public ResponseEntity < User > createUser(@RequestBody User user) {
         return ResponseEntity.ok().body(this.userService.createUser(user));

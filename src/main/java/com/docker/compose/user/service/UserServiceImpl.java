@@ -32,7 +32,11 @@ public class UserServiceImpl implements UserService {
             User userUpdate = userDb.get();
             userUpdate.setId(user.getId());
             userUpdate.setUsername(user.getUsername());
-            userUpdate.setRealName(user.getRealName());
+            userUpdate.setFirstName(user.getFirstName());
+            userUpdate.setLastName(user.getLastName());
+            userUpdate.setPassword(user.getPassword());
+            userUpdate.setNumber(user.getNumber());
+
             userUpdate.setAdmin(user.isAdmin());
             userUpdate.setEmail(user.getEmail());
             userUpdate.setAddress(user.getAddress());
@@ -47,6 +51,16 @@ public class UserServiceImpl implements UserService {
     @Override
     public List < User > getAllUser() {
         return this.userRepository.findAll();
+    }
+
+    @Override
+    public User findUserByEmail(String email){
+        if(this.userRepository.getUserByEmail(email) == null){
+            throw new ResourceNotFoundException("User with email " + email + " not found!");
+        }
+        else {
+            return this.userRepository.getUserByEmail(email);
+        }
     }
 
     @Override
@@ -78,4 +92,5 @@ public class UserServiceImpl implements UserService {
     public void deleteCollection() {
         this.userRepository.deleteAll();
     }
+
 }
