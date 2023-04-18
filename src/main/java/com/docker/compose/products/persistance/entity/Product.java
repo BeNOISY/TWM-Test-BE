@@ -4,6 +4,8 @@ import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.Map;
+
 @Data
 @Document
 public class Product {
@@ -16,5 +18,7 @@ public class Product {
     private long count;
     private String description;
     private String img;
+
+    private Map <String, String > parameters;
 }
 
