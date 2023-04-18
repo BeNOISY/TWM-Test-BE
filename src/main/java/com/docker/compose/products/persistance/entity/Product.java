@@ -19,6 +19,6 @@ public class Product {
     private String description;
     private String img;
 
-    private Map <String, String > parameters;
+    private Map<String, String> parameters;
 }
 
