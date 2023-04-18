@@ -5,7 +5,7 @@ import com.docker.compose.user.persistance.entity.User;
 import java.util.List;
 
 
-public interface UserService {
+public interface UserService{
     User createUser(User user);
 
     User updateUser(User user);
