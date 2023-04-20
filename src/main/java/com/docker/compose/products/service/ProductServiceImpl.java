@@ -62,7 +62,7 @@ public class ProductServiceImpl implements ProductService {
     public List<Product> getProductsByParameter(String type, String parameter, String value) {
         Map<String, String> parameters = new HashMap<>();
         parameters.put(parameter, value);
-        return productRepository.findProductsByParameters(type, parameters);
+        return productRepository.findProductsByParameters(parameters);
         //processors - Intel, AMD
         //motherboards - Asus, Msi
         //disks - HDD, SDD
