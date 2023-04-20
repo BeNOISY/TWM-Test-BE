@@ -13,6 +13,8 @@ public interface ProductService {
 
     List<Product> getProductByType(String type);
 
+    List<Product> getProductsByName(String type, String name);
+
     Product getProductById(String productId);
 
     void deleteProduct(String id);
