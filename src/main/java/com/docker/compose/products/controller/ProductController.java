@@ -27,11 +27,10 @@ public class ProductController {
     }
 
 
-    @GetMapping("products/type:{type}/map:{{parameter}:{value}}") // products/type:PSU/map:{modularny:nie}
-    public ResponseEntity< List<Product>> getProductsByParameters(@PathVariable("type")String type,
-                                                            @PathVariable("parameter") String parameter,
+    @GetMapping("products/map:{{parameter}:{value}}") // products/type:PSU/map:{modularny:nie}
+    public ResponseEntity< List<Product>> getProductsByParameters(@PathVariable("parameter") String parameter,
                                                             @PathVariable("value") String value){
-        return ResponseEntity.ok().body(productService.getProductsByParameter(type, parameter, value));
+        return ResponseEntity.ok().body(productService.getProductsByParameter(parameter, value));
     }
 
     @GetMapping("/products/{id}")

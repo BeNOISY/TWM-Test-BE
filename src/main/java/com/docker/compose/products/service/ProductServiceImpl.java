@@ -59,7 +59,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public List<Product> getProductsByParameter(String type, String parameter, String value) {
+    public List<Product> getProductsByParameter(String parameter, String value) {
         Map<String, String> parameters = new HashMap<>();
         parameters.put(parameter, value);
         return productRepository.findProductsByParameters(parameters);
