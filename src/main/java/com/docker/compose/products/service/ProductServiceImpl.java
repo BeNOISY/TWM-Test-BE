@@ -3,12 +3,13 @@ package com.docker.compose.products.service;
 import com.docker.compose.exception.ResourceNotFoundException;
 import com.docker.compose.products.persistance.entity.Product;
 import com.docker.compose.products.persistance.repository.ProductRepository;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 
 @Service
@@ -57,8 +58,16 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public List<Product> getProductsByName(String type, String name) {
-        return productRepository.findProductsByName(type, name);
+    public List<Product> getProductsByParameter(String type, String parameter, String value) {
+        Map<String, String> map = new HashMap<>();
+        map.put(parameter, value);
+
+        return productRepository.findProductsByParameter(type, map);
+        //processors - Intel, AMD
+        //motherboards - Intel, AMD
+        //disks - HDD, SDD
+        //PSU - do 600. 600 -800, 800 +
+
     }
 
 
