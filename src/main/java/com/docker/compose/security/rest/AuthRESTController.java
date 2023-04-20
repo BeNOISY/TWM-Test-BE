@@ -55,7 +55,17 @@ public class AuthRESTController {
     @PostMapping("/register")
     @Transactional
     public ResponseEntity<?> register(@Valid @RequestBody RegisterDTO dto){
-        User user = new User(dto.getUsername(), dto.getEmail(), passwordEncoder.encode(dto.getPassword()));
+        User user = new User(
+                dto.getId(),
+                dto.getUsername(),
+                dto.getEmail(),
+                passwordEncoder.encode(dto.getPassword()),
+                dto.getFirstName(),
+                dto.getLastName(),
+                dto.isAdmin(),
+                dto.getAddress(),
+                dto.getCity(),
+                dto.getNumber());
         userRepository.save(user);
 
         RefreshToken refreshToken = new RefreshToken();
