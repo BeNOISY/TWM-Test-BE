@@ -6,8 +6,13 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+<<<<<<< HEAD
 @Service
 public interface UserService extends UserDetailsService {
+=======
+
+public interface UserService {
+>>>>>>> parent of 6262920 (Added Tokens)
     User createUser(User user);
 
     User updateUser(User user);

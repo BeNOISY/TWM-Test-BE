@@ -1,21 +1,19 @@
 package com.docker.compose.user.persistance.entity;
 
+<<<<<<< HEAD
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
+=======
+>>>>>>> parent of 6262920 (Added Tokens)
 import lombok.Data;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
-
-import java.util.Collection;
-import java.util.Collections;
 
 
 @Data
 @Document
+<<<<<<< HEAD
 @AllArgsConstructor
 public class User implements UserDetails {
 
@@ -37,10 +35,22 @@ public class User implements UserDetails {
     private String firstName;
     private String lastName;
     private boolean admin;
+=======
+public class User{
+
+    @Id
+    private String id;
+    private String username;
+    private String firstName;
+    private String lastName;
+    private boolean admin;
+    private String email;
+>>>>>>> parent of 6262920 (Added Tokens)
     private String address;
     private String city;
     private String number;
 
+<<<<<<< HEAD
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -66,4 +76,6 @@ public class User implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
+=======
+>>>>>>> parent of 6262920 (Added Tokens)
 }
