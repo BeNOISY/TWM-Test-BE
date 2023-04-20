@@ -57,8 +57,8 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public List<Product> getProductsByName( String name) {
-        return productRepository.findProductsByName(name);
+    public List<Product> getProductsByName(String type, String name) {
+        return productRepository.findProductsByName(type, name);
     }
 
 
