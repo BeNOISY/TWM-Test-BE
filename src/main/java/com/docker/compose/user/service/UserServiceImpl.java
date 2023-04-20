@@ -4,17 +4,13 @@ import com.docker.compose.user.persistance.entity.User;
 import com.docker.compose.user.persistance.repository.UserRepository;
 import com.docker.compose.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
 
 @Service
-@Transactional
 public class UserServiceImpl implements UserService {
 
     @Autowired
@@ -93,10 +89,5 @@ public class UserServiceImpl implements UserService {
     @Override
     public void deleteCollection() {
         this.userRepository.deleteAll();
-    }
-
-    @Override
-    public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
-        return null;
     }
 }
