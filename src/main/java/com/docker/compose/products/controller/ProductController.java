@@ -36,6 +36,12 @@ public class ProductController {
         return ResponseEntity.ok().body(productService.getProductById(id));
     }
 
+
+    @GetMapping("/error")
+    public ResponseEntity<Error> getError(){
+        return ResponseEntity.internalServerError().body(null);
+    }
+
     @PostMapping("/products")
     public ResponseEntity < Product > createProduct(@RequestBody Product product) {
         return ResponseEntity.ok().body(this.productService.createProduct(product));
