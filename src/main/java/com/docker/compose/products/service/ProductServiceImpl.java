@@ -57,9 +57,9 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public List<Product> getProductsInParameterByKey(String key) {
+    public List<Product> getProductsByValue(String value) {
 
-        return productRepository.findProductsByParametersValue(key);
+        return productRepository.findProductsByParametersValue(value);
         //processors - Intel, AMD
         //motherboards - Asus, Msi
         //disks - HDD, SDD
