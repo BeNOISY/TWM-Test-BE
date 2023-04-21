@@ -27,9 +27,7 @@ public class ProductController {
     }
 
     @GetMapping("products/additional:{additional}")
-    public ResponseEntity< List<Product>> getProductsByParameters(
-            /*@PathVariable("type") String type,*/
-            @PathVariable("additional") String additional){
+    public ResponseEntity< List<Product>> getProductsByParameters(@PathVariable String additional){
         return ResponseEntity.ok().body(productService.getProductsByAdditional(additional));
     }
 
