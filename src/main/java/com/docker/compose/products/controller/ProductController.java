@@ -26,7 +26,7 @@ public class ProductController {
         return ResponseEntity.ok().body(productService.getProductByType(type));
     }
 
-    @GetMapping("products/value:{value}")
+    @GetMapping("products//value:{value}")
     public ResponseEntity< List<Product>> getProductsByParameters(@PathVariable String value){
         return ResponseEntity.ok().body(productService.getProductsByValue(value));
     }
