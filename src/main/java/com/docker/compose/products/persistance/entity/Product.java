@@ -18,6 +18,7 @@ public class Product {
     private long count;
     private String description;
     private String img;
+    private String Additional;
 
     private Map<String, String> parameters;
 }

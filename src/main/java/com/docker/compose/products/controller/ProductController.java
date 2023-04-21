@@ -7,9 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 
 @RestController
@@ -28,13 +26,11 @@ public class ProductController {
         return ResponseEntity.ok().body(productService.getProductByType(type));
     }
 
-    @GetMapping("products/map://{key}:{value}//")
+    @GetMapping("products/type:{type}/additional:{additional}")
     public ResponseEntity< List<Product>> getProductsByParameters(
-            @PathVariable("key") String key,
-            @PathVariable("value") String value){
-        Map<String , String> map = new HashMap<String, String>();
-        map.put(key,value);
-        return ResponseEntity.ok().body(productService.getProductsByParameters(map));
+            /*@PathVariable("type") String type,*/
+            @PathVariable("additional") String additional){
+        return ResponseEntity.ok().body(productService.getProductsByAdditional(additional));
     }
 
     @GetMapping("/products/{id}")
