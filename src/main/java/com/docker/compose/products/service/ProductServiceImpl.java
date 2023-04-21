@@ -59,10 +59,10 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public List<Product> getProductsByParameter(String key, String value) {
+    public List<Product> getProductsInParameterByKey(String key) {
         Map<String,String> map = new HashMap<>();
-        map.put(key,value);
-        return productRepository.findProductsByParameters(map);
+        System.out.println(map.get(key));
+        return productRepository.findProductsInParametersByKey(map.get(key));
         //processors - Intel, AMD
         //motherboards - Asus, Msi
         //disks - HDD, SDD

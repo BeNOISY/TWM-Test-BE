@@ -27,11 +27,10 @@ public class ProductController {
     }
 
 
-    @GetMapping("products/map://{key}:{value}//") //products/type:PSU/map:{modularny:nie}
+    @GetMapping("products/key:{key}") //products/type:PSU/map:{modularny:nie}
     public ResponseEntity< List<Product>> getProductsByParameters(
-            @PathVariable("key") String key,
-            @PathVariable("value") String value){
-        return ResponseEntity.ok().body(productService.getProductsByParameter(key, value));
+            @PathVariable("key") String key){
+        return ResponseEntity.ok().body(productService.getProductsInParameterByKey(key));
     }
 
     @GetMapping("/products/{id}")
