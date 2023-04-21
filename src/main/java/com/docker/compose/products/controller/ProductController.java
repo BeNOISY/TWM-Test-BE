@@ -27,7 +27,7 @@ public class ProductController {
     }
 
 
-    @GetMapping("products/map://{key}/{value}//") //products/type:PSU/map:{modularny:nie}
+    @GetMapping("products/map:<{key}:{value}>") //products/type:PSU/map:{modularny:nie}
     public ResponseEntity< List<Product>> getProductsByParameters(
             @PathVariable("key") String key,
             @PathVariable("value") String value){
