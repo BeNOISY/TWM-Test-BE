@@ -39,7 +39,7 @@ public class ProductController {
 
     @PostMapping("/products")
     public ResponseEntity < Product > createProduct(@RequestBody Product product) {
-        System.out.println(product);
+        System.out.println("\n" + product + "\n");
         return ResponseEntity.ok().body(this.productService.createProduct(product));
     }
 
