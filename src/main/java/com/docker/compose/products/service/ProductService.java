@@ -2,6 +2,7 @@ package com.docker.compose.products.service;
 import com.docker.compose.products.persistance.entity.Product;
 
 import java.util.List;
+import java.util.Map;
 
 
 public interface ProductService {
@@ -13,7 +14,7 @@ public interface ProductService {
 
     List<Product> getProductByType(String type);
 
-    public List<Product> getProductsByValue(String value);
+    public List<Product> getProductsByParameters(Map<String, String> parameters);
 
     Product getProductById(String productId);
 

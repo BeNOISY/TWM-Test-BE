@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 
@@ -57,9 +58,8 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public List<Product> getProductsByValue(String value) {
-
-        return productRepository.findProductsByParametersValue(value);
+    public List<Product> getProductsByParameters(Map<String, String> parameters) {
+        return productRepository.findProductsByParameters(parameters);
         //processors - Intel, AMD
         //motherboards - Asus, Msi
         //disks - HDD, SDD
