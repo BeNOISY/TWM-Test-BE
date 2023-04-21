@@ -7,9 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 
 
@@ -60,9 +58,8 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public List<Product> getProductsInParameterByKey(String key) {
-        Map<String, String> map = new HashMap<>();
-        System.out.println(map.get(key));
-        return productRepository.findProductsByParameters(map.get(key));
+
+        return productRepository.findProductsByParametersValue(key);
         //processors - Intel, AMD
         //motherboards - Asus, Msi
         //disks - HDD, SDD

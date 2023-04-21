@@ -27,9 +27,8 @@ public class ProductController {
     }
 
 
-    @GetMapping("products/key:{key}") //products/type:PSU/map:{modularny:nie}
-    public ResponseEntity< List<Product>> getProductsByParameters(
-            @PathVariable("key") String key){
+    @GetMapping("products/key:{key}")
+    public ResponseEntity< List<Product>> getProductsByParameters(@PathVariable String key){
         return ResponseEntity.ok().body(productService.getProductsInParameterByKey(key));
     }
 
