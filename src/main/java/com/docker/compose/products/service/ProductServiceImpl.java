@@ -57,8 +57,8 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public List<Product> getProductsByAdditional(String additional) {
-        return productRepository.findProductsByAdditional(additional);
+    public List<Product> getProductsByAdditionalAndType(String type, String additional) {
+        return productRepository.findProductsByAdditionalAndType(type, additional);
         //processors - Intel, AMD
         //motherboards - Asus, Msi
         //disks - HDD, SDD
