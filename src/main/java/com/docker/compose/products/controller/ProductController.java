@@ -26,7 +26,7 @@ public class ProductController {
         return ResponseEntity.ok().body(productService.getProductByType(type));
     }
 
-    @GetMapping("products/type:{type}/additional:{additional}")
+    @GetMapping("products/type:{type}/{additional}")
     public ResponseEntity< List<Product>> getProductsByParameters(@PathVariable("type") String type,
                                                                   @PathVariable("additional") String additional){
         return ResponseEntity.ok().body(productService.getProductsByAdditionalAndType(type, additional));
