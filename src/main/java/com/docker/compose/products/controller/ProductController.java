@@ -28,7 +28,7 @@ public class ProductController {
         return ResponseEntity.ok().body(productService.getProductByType(type));
     }
 
-    @GetMapping("products/map:({key}:{value})")
+    @GetMapping("products/map://{key}:{value}//")
     public ResponseEntity< List<Product>> getProductsByParameters(
             @PathVariable("key") String key,
             @PathVariable("value") String value){
