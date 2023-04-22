@@ -86,8 +86,8 @@ public class UserServiceImpl implements UserService {
 //        System.out.printf("hash: %s%n", enc.encodeToString(hash));
 
         User user = userRepository.getUserByEmail(email);
-        System.out.println("Najden user podla zadanej emailovej adresy:" + user);
-        System.out.println("Jeho heslo je: " + user.getPassword());
+        System.out.println("\nNajden user podla zadanej emailovej adresy:" + user + "\n");
+        System.out.println("Jeho heslo je: " + user.getPassword() + "\n");
         return Objects.equals(user.getPassword(), password);
     }
 
