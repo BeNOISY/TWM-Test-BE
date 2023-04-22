@@ -1,12 +1,13 @@
 package com.docker.compose.user.service;
 
+import com.docker.compose.exception.ResourceNotFoundException;
 import com.docker.compose.user.persistance.entity.User;
 import com.docker.compose.user.persistance.repository.UserRepository;
-import com.docker.compose.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 
@@ -59,6 +60,12 @@ public class UserServiceImpl implements UserService {
         else {
             return this.userRepository.getUserByEmail(email);
         }
+    }
+
+    @Override
+    public boolean loginUser(String email, String password) {
+        User user = userRepository.getUserByEmail(email);
+        return Objects.equals(user.getPassword(), password);
     }
 
     @Override

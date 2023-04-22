@@ -33,10 +33,18 @@ public class UserController {
         return ResponseEntity.ok().body(userService.findUserByEmail(email));
     }
 
-    @PostMapping("/users")
+    @GetMapping("user/login:({email}:{password})")
+    public boolean LoginUser(
+            @PathVariable("email") String email,
+            @PathVariable("password") String password){
+        return userService.loginUser(email,password);
+    }
+
+    @PostMapping("/users/register")
     public ResponseEntity < User > createUser(@RequestBody User user) {
         return ResponseEntity.ok().body(this.userService.createUser(user));
     }
+
 
     @PutMapping("/users/{id}")
     public ResponseEntity < User > updateUser(@PathVariable String id, @RequestBody User user) {

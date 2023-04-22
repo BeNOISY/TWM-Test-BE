@@ -20,4 +20,6 @@ public interface UserService {
     void deleteCollection();
 
     User findUserByEmail(String email);
+
+    boolean loginUser(String email, String password);
 }
