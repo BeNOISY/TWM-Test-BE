@@ -34,10 +34,14 @@ public class UserController {
     }
 
     @GetMapping("users/login://{email}:{password}//")
-    public boolean LoginUser(
+    public ResponseEntity<User> LoginUser(
             @PathVariable("email") String email,
             @PathVariable("password") String password){
-        return userService.loginUser(email,password);
+        if(userService.loginUser(email,password)){
+            return ResponseEntity.ok().body(userService.findUserByEmail(email));
+        }else {
+            throw new RuntimeException("User was not Found");
+        }
     }
 
     @PostMapping("/users/register")
