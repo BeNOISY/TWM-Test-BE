@@ -33,7 +33,7 @@ public class UserController {
         return ResponseEntity.ok().body(userService.findUserByEmail(email));
     }
 
-    @GetMapping("user/login://{email}:{password}//")
+    @GetMapping("users/login://{email}:{password}//")
     public boolean LoginUser(
             @PathVariable("email") String email,
             @PathVariable("password") String password){
