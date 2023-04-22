@@ -6,6 +6,13 @@ import com.docker.compose.user.persistance.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.crypto.SecretKeyFactory;
+import javax.crypto.spec.PBEKeySpec;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
+import java.security.spec.InvalidKeySpecException;
+import java.security.spec.KeySpec;
+import java.util.Base64;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -64,6 +71,27 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean loginUser(String email, String password) {
+
+        SecureRandom random = new SecureRandom();
+        byte[] salt = new byte[16];
+        random.nextBytes(salt);
+        KeySpec spec = new PBEKeySpec(password.toCharArray(), salt, 65536, 128);
+        SecretKeyFactory f = null;
+        try {
+            f = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA1");
+        } catch (NoSuchAlgorithmException e) {
+            throw new RuntimeException(e);
+        }
+        byte[] hash = new byte[0];
+        try {
+            hash = f.generateSecret(spec).getEncoded();
+        } catch (InvalidKeySpecException e) {
+            throw new RuntimeException(e);
+        }
+        Base64.Encoder enc = Base64.getEncoder();
+        System.out.printf("salt: %s%n", enc.encodeToString(salt));
+        System.out.printf("hash: %s%n", enc.encodeToString(hash));
+
         User user = userRepository.getUserByEmail(email);
         return Objects.equals(user.getPassword(), password);
     }
