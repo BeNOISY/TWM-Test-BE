@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bdcf147-1eb2-49d5-b7f2-954b81c8f7a4" name="Changes" comment="Added Query">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-    </list>
+
+    <list default="true" id="67d9f2dc-735c-4ec5-bd5e-8d8fdaf71a7c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,17 +36,18 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
+
+        <option name="mavenHome" value="Use Maven wrapper" />
         <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
-  <component name="ProjectId" id="2NPjOhI93GvVuXsvVYgMYuMGVxD" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
+  <component name="ProjectId" id="2OpNZ6ZTAwSnH4VGUHOLlcbHv8Y" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -61,51 +61,41 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+
     &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/ALL/School/2.Rocnik/LS/Databazové Systémy/TWM-Test-BE&quot;,
+
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;47184ecc4670e8177a9475b8de79b3d8&quot;,
+
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.docker.compose.service" />
-      <recent name="com.docker.compose.repository" />
-      <recent name="com.docker.compose.model" />
-      <recent name="com.docker.compose.controller" />
-    </key>
-  </component>
-  <component name="RunAnythingCache">
-    <option name="myCommands">
-      <command value="mvn " />
-    </option>
-  </component>
-  <component name="RunManager" selected="Application.SpringbootMongodbDockerApplication">
-    <configuration name="SpringbootMongodbDockerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.docker.compose.SpringbootMongodbDockerApplication" />
-      <module name="TWM-Test-BE" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.docker.compose.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+  <component name="RunManager" selected="Spring Boot.SpringbootMongodbDockerApplication">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="SpringBootEmail-master" />
+
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SpringbootMongodbDockerApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="SpringBootEmail-master" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringEmailDemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+
       <module name="TWM-Test-BE" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.docker.compose.SpringbootMongodbDockerApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.arjuncodes.springemaildemo.SpringEmailDemoApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -138,150 +128,19 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5bdcf147-1eb2-49d5-b7f2-954b81c8f7a4" name="Changes" comment="" />
-      <created>1679572584247</created>
+      <changelist id="67d9f2dc-735c-4ec5-bd5e-8d8fdaf71a7c" name="Changes" comment="" />
+      <created>1682253622323</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1679572584247</updated>
-      <workItem from="1679572584749" duration="20000" />
-      <workItem from="1679572653582" duration="2510000" />
-      <workItem from="1679598315588" duration="1966000" />
-      <workItem from="1679681334158" duration="1085000" />
-      <workItem from="1679697242796" duration="1278000" />
-      <workItem from="1679764966420" duration="2694000" />
-      <workItem from="1679767688899" duration="1653000" />
-      <workItem from="1679780624629" duration="2381000" />
-      <workItem from="1679783058892" duration="15000" />
-      <workItem from="1679783367140" duration="1976000" />
-      <workItem from="1679846642439" duration="2966000" />
-      <workItem from="1679851086500" duration="6007000" />
-      <workItem from="1679857127391" duration="2932000" />
-      <workItem from="1679935701205" duration="918000" />
-      <workItem from="1679937938548" duration="1158000" />
-      <workItem from="1679939333536" duration="488000" />
-      <workItem from="1679945199071" duration="791000" />
+
+      <updated>1682253622323</updated>
+      <workItem from="1682253625477" duration="2484000" />
+      <workItem from="1682256135415" duration="135000" />
     </task>
-    <task id="LOCAL-00001" summary="Neviem kam pushujem :D">
-      <created>1679572870605</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1679572870605</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Neviem kam pushujem :D">
-      <created>1679573050171</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1679573050171</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Neviem kam pushujem :D">
-      <created>1679697347445</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1679697347445</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Pridane Userov">
-      <created>1679783401027</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1679783401027</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Pridane Uprava - not blank">
-      <created>1679847212770</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1679847212770</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Delete Collection pridane do Userov">
-      <created>1679847846727</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1679847846727</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Ajem dum fella">
-      <created>1679848306067</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1679848306067</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Hopfuľi delete coll User a Product done">
-      <created>1679849275551</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1679849275551</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Products finalized, Cart edited">
-      <created>1679856564296</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1679856564296</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Products finalized, Cart edited">
-      <created>1679857281079</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1679857281079</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Products finalized, Cart edited">
-      <created>1679858021604</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1679858021604</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Products finalized, Cart edited">
-      <created>1679858412771</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1679858412771</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Added Query">
-      <created>1679945763945</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1679945763945</updated>
-    </task>
-    <option name="localTasksCounter" value="14" />
+
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Neviem kam pushujem :D" />
-    <MESSAGE value="Pridane Userov" />
-    <MESSAGE value="Pridane Uprava - not blank" />
-    <MESSAGE value="Delete Collection pridane do Userov" />
-    <MESSAGE value="Ajem dum fella" />
-    <MESSAGE value="Hopfuľi delete coll User a Product done" />
-    <MESSAGE value="Products finalized, Cart edited" />
-    <MESSAGE value="Added Query" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Query" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>
