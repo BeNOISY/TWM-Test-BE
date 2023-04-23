@@ -36,10 +36,23 @@ public class CartServiceImpl implements CartService {
             finalProducts.add((product.getPrice()) + "€\n");
         });
         senderService.sendSimpleEmail(user.getEmail(),
-                "TWM Electronics receipt",
-                "Hi " + user.getUsername() +".\n\nThank you for your purchase!\nHere is your purchase summary:\n"
-                        + finalProducts.toString().replace("[","").replace("]", "") + "\nTotal price: " + cart.getFinalPrice()
-                        + "€\nTime of purchase: " + cart.getTime());
+                "TWM Electronics receipt no.:" + cart.getTime(),
+                "Hi " + user.getUsername() +"." +
+                        "\n" +
+                        "\n" +
+                        "Thank you for your purchase!" +
+                        "\nHere is your purchase summary:" +
+                        "\n"
+                        + finalProducts
+                        .toString()
+                        .replace("[","")
+                        .replace("]", "")
+                        .replace(",","") +
+                        "\n" +
+                        "Total price: " + cart.getFinalPrice()+ "€" +
+                        "\nTime of purchase: " + cart.getTime() + "" +
+                        "\n We send your purchase to: " + user.getAddress() + ", in: " + user.getCity() + "." +
+                        "\nTWM Electronics thank you for your purchase and hope that you will come again!");
         return cartRepository.save(cart);
     }
 
