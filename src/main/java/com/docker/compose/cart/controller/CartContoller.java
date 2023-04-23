@@ -2,11 +2,17 @@ package com.docker.compose.cart.controller;
 
 import com.docker.compose.cart.service.CartService;
 import com.docker.compose.cart.persistance.entity.Cart;
+
+
+import com.docker.compose.cart.email.EmailSenderService;
+import com.docker.compose.cart.persistance.entity.Cart;
+import com.docker.compose.cart.service.CartService;
+import com.docker.compose.user.persistance.entity.User;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 
 import java.util.List;
 
@@ -29,6 +35,13 @@ public class CartContoller {
 
     @PostMapping("/cart")
     public ResponseEntity < Cart > createCart(@RequestBody Cart cart) {
+
+        User user = cart.getUser();
+        senderService.sendSimpleEmail(user.getEmail(),
+                "Your order no." + cart.getId(),
+                "Skuska123"
+        );
+
         return ResponseEntity.ok().body(this.cartService.createCart(cart));
     }
 
@@ -49,4 +62,5 @@ public class CartContoller {
         this.cartService.deleteCollection();
         return HttpStatus.OK;
     }
+
 }
