@@ -9,6 +9,9 @@
         <module name="TWM-Test-BE" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="TWM-Test-BE" target="9" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
