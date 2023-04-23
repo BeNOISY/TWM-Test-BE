@@ -18,6 +18,6 @@ public class Cart {
     private User user;
     private List<Product> products;
     private float finalPrice;
-    private long time;
+    private String time;
 
 }
