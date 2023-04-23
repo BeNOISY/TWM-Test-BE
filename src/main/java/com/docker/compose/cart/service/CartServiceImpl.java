@@ -32,13 +32,13 @@ public class CartServiceImpl implements CartService {
         List<Product> products = cart.getProducts();
         ArrayList<String> finalProducts = new ArrayList<>();
         products.forEach(product -> {
-            finalProducts.add(product.getName());
-            finalProducts.add(String.valueOf(product.getPrice()));
+            finalProducts.add(product.getName() + "\n");
+            finalProducts.add((product.getPrice()) + "€\n");
         });
         senderService.sendSimpleEmail(user.getEmail(),
-                "TWM Electronics receipt Id: " + cart.getId(),
+                "TWM Electronics receipt",
                 "Hi " + user.getUsername() +".\n\nThank you for your purchase!\nHere is your purchase summary:\n"
-                        + finalProducts + "\nTotal price: " + cart.getFinalPrice()
+                        + finalProducts.toString().replace("[","").replace("]", "") + "\nTotal price: " + cart.getFinalPrice()
                         + "€\nTime of purchase: " + cart.getTime());
         return cartRepository.save(cart);
     }
