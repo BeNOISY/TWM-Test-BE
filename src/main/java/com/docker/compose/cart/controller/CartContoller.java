@@ -1,5 +1,6 @@
 package com.docker.compose.cart.controller;
 
+
 import com.docker.compose.cart.email.EmailSenderService;
 import com.docker.compose.cart.persistance.entity.Cart;
 import com.docker.compose.cart.service.CartService;
@@ -19,6 +20,7 @@ public class CartContoller {
     private CartService cartService;
 
     @Autowired
+
     private EmailSenderService senderService;
 
     @GetMapping("/cart")
@@ -38,6 +40,7 @@ public class CartContoller {
                 "Your order no." + cart.getId(),
                 "Skuska123"
         );
+
         return ResponseEntity.ok().body(this.cartService.createCart(cart));
     }
 
@@ -58,4 +61,5 @@ public class CartContoller {
         this.cartService.deleteCollection();
         return HttpStatus.OK;
     }
+
 }
