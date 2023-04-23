@@ -1,6 +1,0 @@
-#spring:
-#  data:
-#    mongodb:
-#      database: TWMElectronics
-#      host: twmmongodb
-#      port: 27017
