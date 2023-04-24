@@ -7,10 +7,15 @@ import com.docker.compose.EmailSenderService;
 import com.docker.compose.exception.ResourceNotFoundException;
 import com.docker.compose.cart.persistance.entity.Cart;
 import com.docker.compose.cart.persistance.repository.CartRepository;
+import com.docker.compose.products.persistance.entity.Product;
+import com.docker.compose.user.persistance.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.io.File;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -27,10 +32,34 @@ public class CartServiceImpl implements CartService {
 
     @Override
     public Cart createCart(Cart cart) {
-        senderService.sendSimpleEmail("dian.pato66@gmail.com",
-                "This is email subject",
-                "This is email body");
-
+        File htmlFile = new File("EmailTemplate.html");
+        User user = cart.getUser();
+        List<Product> products = cart.getProducts();
+        ArrayList<String> finalProducts = new ArrayList<>();
+        products.forEach(product -> {
+            finalProducts.add(product.getName() + "\n");
+            finalProducts.add((product.getPrice()) + "€\n");
+        });
+        senderService.sendSimpleEmail(user.getEmail(),
+                "TWM Electronics receipt no.:" + cart.getTime(),
+//                "Hi " + user.getUsername() +"." +
+//                        "\n" +
+//                        "\n" +
+//                        "Thank you for your purchase!" +
+//                        "\nHere is your purchase summary:" +
+//                        "\n"
+//                        + finalProducts
+//                        .toString()
+//                        .replace("[","")
+//                        .replace("]", "")
+//                        .replace(",","") +
+//                        "\n" +
+//                        "Total price: " + cart.getFinalPrice()+ "€" +
+//                        "\nTime of purchase: " + cart.getTime() + "" +
+//                        "\n We send your purchase to: " + user.getAddress() + ", in: " + user.getCity() + "." +
+//                        "\nTWM Electronics thank you for your purchase and hope that you will come again!"
+                String.valueOf(htmlFile)
+        );
         return cartRepository.save(cart);
     }
 
