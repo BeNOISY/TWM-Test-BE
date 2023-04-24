@@ -1,12 +1,11 @@
 package com.docker.compose.cart.service;
 
 
-
 import com.docker.compose.EmailSenderService;
-
-import com.docker.compose.exception.ResourceNotFoundException;
 import com.docker.compose.cart.persistance.entity.Cart;
 import com.docker.compose.cart.persistance.repository.CartRepository;
+import com.docker.compose.exception.ResourceNotFoundException;
+import com.docker.compose.user.persistance.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -27,10 +26,12 @@ public class CartServiceImpl implements CartService {
 
     @Override
     public Cart createCart(Cart cart) {
-        senderService.sendSimpleEmail("simonbaranec58@gmail.com",
-                "This is email subject",
-                "This is email body");
-
+        User user = cart.getUser();
+        senderService.sendSimpleEmail(
+                user.getEmail(),
+                "Your order no.:" + cart.getTime(),
+                "Hi " + user.getFirstName() + "!"
+                );
         return cartRepository.save(cart);
     }
 
