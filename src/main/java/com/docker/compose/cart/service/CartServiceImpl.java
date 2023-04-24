@@ -27,7 +27,7 @@ public class CartServiceImpl implements CartService {
 
     @Override
     public Cart createCart(Cart cart) {
-        senderService.sendSimpleEmail("dian.pato66@gmail.com",
+        senderService.sendSimpleEmail("simonbaranec58@gmail.com",
                 "This is email subject",
                 "This is email body");
 
