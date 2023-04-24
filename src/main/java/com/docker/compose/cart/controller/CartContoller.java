@@ -1,6 +1,6 @@
 package com.docker.compose.cart.controller;
 
-import com.docker.compose.cart.email.EmailSenderService;
+import com.docker.compose.EmailSenderService;
 import com.docker.compose.cart.persistance.entity.Cart;
 import com.docker.compose.cart.service.CartService;
 import org.springframework.beans.factory.annotation.Autowired;

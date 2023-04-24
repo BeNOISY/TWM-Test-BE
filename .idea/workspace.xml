@@ -60,7 +60,20 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Docker.resources: Compose Deployment">
+  <component name="RunManager" selected="Application.SpringbootMongodbDockerApplication">
+    <configuration name="SpringbootMongodbDockerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.docker.compose.SpringbootMongodbDockerApplication" />
+      <module name="TWM-Test-BE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.docker.compose.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="SpringBootEmail-master" />
       <method v="2">
@@ -98,6 +111,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SpringbootMongodbDockerApplication" />
         <item itemvalue="Docker.resources: Compose Deployment" />
       </list>
     </recent_temporary>

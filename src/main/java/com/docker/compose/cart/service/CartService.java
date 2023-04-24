@@ -5,15 +5,15 @@ import com.docker.compose.cart.persistance.entity.Cart;
 import java.util.List;
 
 public interface CartService {
-    Cart createCart(Cart product);
+    Cart createCart(Cart cart);
 
-    Cart updateCart(Cart product);
+    Cart updateCart(Cart cart);
 
     List< Cart > getAllCart();
 
-    Cart getCartById(String productId);
+    Cart getCartById(String cartId);
 
-    void deleteCart(String id);
+    void deleteCart(String cartId);
 
     void deleteCollection();
 }
