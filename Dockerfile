@@ -3,7 +3,9 @@ WORKDIR /app
 COPY . .
 RUN mvn install
 
-FROM openjdk:11
+
+FROM openjdk:17
+
 WORKDIR /app
 COPY --from=build /app/target/springboot-mongo-docker.jar /app/springboot-mongo-docker.jar
 EXPOSE 8080
