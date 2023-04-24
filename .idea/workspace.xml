@@ -60,8 +60,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
-
+  <component name="RunManager" selected="Docker.resources: Compose Deployment">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="SpringBootEmail-master" />
       <method v="2">

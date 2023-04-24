@@ -4,11 +4,8 @@ package com.docker.compose.cart.service;
 import com.docker.compose.EmailSenderService;
 import com.docker.compose.cart.persistance.entity.Cart;
 import com.docker.compose.cart.persistance.repository.CartRepository;
-<<<<<<< HEAD
 import com.docker.compose.exception.ResourceNotFoundException;
-=======
 import com.docker.compose.products.persistance.entity.Product;
->>>>>>> 146e247f0659648cf07fb7442a5f907d4a827ad4
 import com.docker.compose.user.persistance.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
