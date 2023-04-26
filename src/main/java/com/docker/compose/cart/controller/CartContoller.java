@@ -3,6 +3,7 @@ package com.docker.compose.cart.controller;
 import com.docker.compose.EmailSenderService;
 import com.docker.compose.cart.persistance.entity.Cart;
 import com.docker.compose.cart.service.CartService;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,6 +13,7 @@ import java.util.List;
 
 
 @RestController
+@AllArgsConstructor
 public class CartContoller {
 
     @Autowired

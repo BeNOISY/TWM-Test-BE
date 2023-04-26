@@ -2,6 +2,7 @@ package com.docker.compose.products.controller;
 
 import com.docker.compose.products.persistance.entity.Product;
 import com.docker.compose.products.service.ProductService;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,6 +12,7 @@ import java.util.List;
 
 
 @RestController
+@AllArgsConstructor
 public class ProductController {
 
     @Autowired
