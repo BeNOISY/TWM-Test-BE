@@ -17,7 +17,7 @@ import java.util.List;
 public class CartContoller {
 
     @Autowired
-    private CartService cartService;
+    private final CartService cartService;
 
     @Autowired
     private EmailSenderService senderService;
