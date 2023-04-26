@@ -17,7 +17,10 @@ import java.util.Optional;
 @Service
 public class CartService {
 
-    private CartRepository cartRepository;
+    public CartService(CartRepository cartRepository){
+        this.cartRepository = cartRepository;
+    }
+    private final CartRepository cartRepository;
 
     private EmailSenderService senderService;
 

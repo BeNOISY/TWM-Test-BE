@@ -23,7 +23,6 @@ public class UserService {
 
     }
 
-
     public User updateUser(User user) {
         Optional< User > userDb = this.userRepository.findById((user.getId()));
 
@@ -64,26 +63,6 @@ public class UserService {
 
 
     public boolean loginUser(String email, String password) {
-
-//        SecureRandom random = new SecureRandom();
-//        byte[] salt = new byte[16];
-//        random.nextBytes(salt);
-//        KeySpec spec = new PBEKeySpec(password.toCharArray(), salt, 65536, 128);
-//        SecretKeyFactory f = null;
-//        try {
-//            f = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA1");
-//        } catch (NoSuchAlgorithmException e) {
-//            throw new RuntimeException(e);
-//        }
-//        byte[] hash = new byte[0];
-//        try {
-//            hash = f.generateSecret(spec).getEncoded();
-//        } catch (InvalidKeySpecException e) {
-//            throw new RuntimeException(e);
-//        }
-//        Base64.Encoder enc = Base64.getEncoder();
-//        System.out.printf("salt: %s%n", enc.encodeToString(salt));
-//        System.out.printf("hash: %s%n", enc.encodeToString(hash));
 
         User user = userRepository.getUserByEmail(email);
         System.out.println("\nNajden user podla zadanej emailovej adresy:" + user + "\n");
