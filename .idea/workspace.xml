@@ -6,12 +6,30 @@
   <component name="ChangeListManager">
     <list default="true" id="67d9f2dc-735c-4ec5-bd5e-8d8fdaf71a7c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/cart/service/CartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/cart/service/CartServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/SpringbootMongodbDockerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/SpringbootMongodbDockerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/cart/service/CartDetailDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/cart/service/CartDetailDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/cart/service/CartRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/cart/service/CartRequestDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/cart/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/cart/service/CartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/cart/service/CartServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/cart/service/EmailTemplate.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/products/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/products/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/products/service/ProductServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/user/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/user/service/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package-info" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -60,6 +78,12 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\ALL\School\2.Rocnik\LS\Databazové Systémy\TWM-Test-BE\src\main\java\com\docker\compose" />
+      <recent name="C:\ALL\School\2.Rocnik\LS\Databazové Systémy\TWM-Test-BE" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.SpringbootMongodbDockerApplication">
     <configuration name="SpringbootMongodbDockerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.docker.compose.SpringbootMongodbDockerApplication" />
