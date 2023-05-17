@@ -26,35 +26,35 @@ public class CartService {
 
 
     public Cart createCart(Cart cart) {
-        User user = cart.getUser();
-        List<Product> products = cart.getProducts();
-        ArrayList<String> finalProducts = new ArrayList<>();
-        products.forEach(product -> {
-            finalProducts.add(product.getName() + "\n");
-            finalProducts.add((product.getPrice()) + "€\n");
-        });
-        senderService.sendSimpleEmail(user.getEmail(),
-                "TWM Electronics receipt no.:" + cart.getTime(),
-//                "Hi " + user.getUsername() +"." +
-//                        "\n" +
-//                        "\n" +
-//                        "Thank you for your purchase!" +
-//                        "\nHere is your purchase summary:" +
-//                        "\n"
-//                        + finalProducts
-//                        .toString()
-//                        .replace("[","")
-//                        .replace("]", "")
-//                        .replace(",","") +
-//                        "\n" +
-//                        "Total price: " + cart.getFinalPrice()+ "€" +
-//                        "\nTime of purchase: " + cart.getTime() + "" +
-//                        "\n We send your purchase to: " + user.getAddress() + ", in: " + user.getCity() + "." +
-//                        "\nTWM Electronics thank you for your purchase and hope that you will come again!"
-
-                "email content"
-                //TODO Email/ThymeLeaf System
-        );
+//        User user = cart.getUser();
+//        List<Product> products = cart.getProducts();
+//        ArrayList<String> finalProducts = new ArrayList<>();
+//        products.forEach(product -> {
+//            finalProducts.add(product.getName() + "\n");
+//            finalProducts.add((product.getPrice()) + "€\n");
+//        });
+//        senderService.sendSimpleEmail(user.getEmail(),
+//                "TWM Electronics receipt no.:" + cart.getTime(),
+////                "Hi " + user.getUsername() +"." +
+////                        "\n" +
+////                        "\n" +
+////                        "Thank you for your purchase!" +
+////                        "\nHere is your purchase summary:" +
+////                        "\n"
+////                        + finalProducts
+////                        .toString()
+////                        .replace("[","")
+////                        .replace("]", "")
+////                        .replace(",","") +
+////                        "\n" +
+////                        "Total price: " + cart.getFinalPrice()+ "€" +
+////                        "\nTime of purchase: " + cart.getTime() + "" +
+////                        "\n We send your purchase to: " + user.getAddress() + ", in: " + user.getCity() + "." +
+////                        "\nTWM Electronics thank you for your purchase and hope that you will come again!"
+//
+//                "email content"
+//                //TODO Email/ThymeLeaf System
+//        );
         return cartRepository.save(cart);
     }
 

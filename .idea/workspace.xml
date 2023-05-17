@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67d9f2dc-735c-4ec5-bd5e-8d8fdaf71a7c" name="Changes" comment="" />
+    <list default="true" id="67d9f2dc-735c-4ec5-bd5e-8d8fdaf71a7c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/cart/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/cart/service/CartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/user/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/user/persistance/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/user/persistance/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/user/persistance/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/user/persistance/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/user/service/UserDetailDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/user/service/UserDetailDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/user/service/UserRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/user/service/UserRequestDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/user/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

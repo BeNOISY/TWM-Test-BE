@@ -30,7 +30,7 @@ public class UserController {
 
     @GetMapping("users/email:{email}")
     public ResponseEntity <User> getUserByEmail(@PathVariable String email){
-        return ResponseEntity.ok().body(userService.findUserByEmail(email));
+        return ResponseEntity.ok().body(userService.getUserByEmail(email));
     }
 
     @GetMapping("users/login://{email}:{password}//")
@@ -38,7 +38,7 @@ public class UserController {
             @PathVariable("email") String email,
             @PathVariable("password") String password){
         if(userService.loginUser(email,password)){
-            return ResponseEntity.ok().body(userService.findUserByEmail(email));
+            return ResponseEntity.ok().body(userService.getUserByEmail(email));
         }else {
             throw new RuntimeException("User was not Found");
         }
@@ -48,7 +48,6 @@ public class UserController {
     public ResponseEntity < User > createUser(@RequestBody User user) {
         return ResponseEntity.ok().body(this.userService.createUser(user));
     }
-
 
     @PutMapping("/users/{id}")
     public ResponseEntity < User > updateUser(@PathVariable String id, @RequestBody User user) {

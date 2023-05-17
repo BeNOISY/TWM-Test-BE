@@ -19,8 +19,17 @@ public class UserService {
     }
 
     public User createUser(User user) {
-        return this.userRepository.save(user);
-
+        User userByUsername = getUserByUsername(user.getUsername());
+        User userByEmail = getUserByEmail(user.getEmail());
+        if(userByUsername == null){
+            if(userByEmail == null){
+                return userRepository.save(user);
+            } else {
+                throw new RuntimeException("User with this email already exist!");
+            }
+        } else{
+            throw new RuntimeException("User with this name is already exist!");
+        }
     }
 
     public User updateUser(User user) {
@@ -40,36 +49,58 @@ public class UserService {
             userUpdate.setAddress(user.getAddress());
             userUpdate.setCity(user.getCity());
             userRepository.save(userUpdate);
-            return userUpdate;
+
+            User userByUsername = getUserByUsername(userUpdate.getUsername());
+            User userByEmail = getUserByEmail(userUpdate.getEmail());
+
+            if(userByUsername == null || Objects.equals(userUpdate.getUsername(), user.getUsername())){
+                if(userByEmail == null || Objects.equals(userUpdate.getEmail(), user.getEmail())){
+                    return userUpdate;
+                }else {
+                    throw new RuntimeException("User with this email already exist!");
+                }
+            }
+            else{
+                throw new RuntimeException("User with this name is already exist!");
+            }
         } else {
             throw new ResourceNotFoundException("Record not found with id : " + user.getId());
         }
     }
-
 
     public List < User > getAllUser() {
         return this.userRepository.findAll();
     }
 
 
-    public User findUserByEmail(String email){
-        if(this.userRepository.getUserByEmail(email) == null){
+    public User getUserByEmail(String email){
+        if(this.userRepository.findUserByEmail(email) == null){
             throw new ResourceNotFoundException("User with email " + email + " not found!");
         }
         else {
-            return this.userRepository.getUserByEmail(email);
+            return this.userRepository.findUserByEmail(email);
         }
     }
 
 
     public boolean loginUser(String email, String password) {
 
-        User user = userRepository.getUserByEmail(email);
+        User user = userRepository.findUserByEmail(email);
         System.out.println("\nNajden user podla zadanej emailovej adresy:" + user + "\n");
         System.out.println("Jeho heslo je: " + user.getPassword() + "\n");
         return Objects.equals(user.getPassword(), password);
     }
 
+    public User getUserByUsername(String username){
+        Optional<User> userDb = Optional.ofNullable(this.userRepository.findUserByUsername(username));
+
+        if(userDb.isPresent()){
+            return userDb.get();
+        }
+        else {
+            throw new ResourceNotFoundException("User with this name doesn't exist: " + username);
+        }
+    }
 
     public User getUserById(String userId) {
 
