@@ -57,11 +57,11 @@ public class UserService {
                 if(userByEmail == null || Objects.equals(userUpdate.getEmail(), user.getEmail())){
                     return userUpdate;
                 }else {
-                    throw new RuntimeException("User with this email already exist!");
+                    throw new Error("User with this email already exist!");
                 }
             }
             else{
-                throw new RuntimeException("User with this name is already exist!");
+                throw new Error("User with this name is already exist!");
             }
         } else {
             throw new ResourceNotFoundException("Record not found with id : " + user.getId());
