@@ -27,11 +27,11 @@ public class UserService {
                 return userRepository.save(user);
             } else {
                 System.out.println("User with this email already exist!");
-                throw new Error("User with this email already exist!");
+                throw new RuntimeException("User with this email already exist!");
             }
         } else{
             System.out.println("User with this name is already exist!");
-            throw new Error("User with this name is already exist!");
+            throw new RuntimeException("User with this name is already exist!");
         }
     }
 
