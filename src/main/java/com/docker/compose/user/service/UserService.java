@@ -25,10 +25,10 @@ public class UserService {
             if(userByEmail == null){
                 return userRepository.save(user);
             } else {
-                throw new RuntimeException("User with this email already exist!");
+                throw new Error("User with this email already exist!");
             }
         } else{
-            throw new RuntimeException("User with this name is already exist!");
+            throw new Error("User with this name is already exist!");
         }
     }
 
