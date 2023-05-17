@@ -24,6 +24,7 @@ public class UserDetailDTO {
     @Pattern(regexp = "^\\S+@\\S+\\.\\S+$", message = "Invalid email address.")
     @Indexed(unique = true)
     private String email;
+
     private String address;
     private String password;
     private String city;
