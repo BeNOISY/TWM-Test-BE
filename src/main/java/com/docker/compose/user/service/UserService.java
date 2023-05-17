@@ -23,11 +23,14 @@ public class UserService {
         User userByEmail = getUserByEmail(user.getEmail());
         if(userByUsername == null){
             if(userByEmail == null){
+                System.out.println("User registered!");
                 return userRepository.save(user);
             } else {
+                System.out.println("User with this email already exist!");
                 throw new Error("User with this email already exist!");
             }
         } else{
+            System.out.println("User with this name is already exist!");
             throw new Error("User with this name is already exist!");
         }
     }
