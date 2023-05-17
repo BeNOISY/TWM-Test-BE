@@ -19,20 +19,22 @@ public class UserService {
     }
 
     public User createUser(User user) {
-        User userByUsername = getUserByUsername(user.getUsername());
-        User userByEmail = getUserByEmail(user.getEmail());
-        if(userByUsername == null){
-            if(userByEmail == null){
-                System.out.println("User registered!");
-                return userRepository.save(user);
-            } else {
-                System.out.println("User with this email already exist!");
-                throw new RuntimeException("User with this email already exist!");
-            }
-        } else{
-            System.out.println("User with this name is already exist!");
-            throw new RuntimeException("User with this name is already exist!");
-        }
+//        User userByUsername = getUserByUsername(user.getUsername());
+//        User userByEmail = getUserByEmail(user.getEmail());
+//        if(userByUsername == null){
+//            if(userByEmail == null){
+//                System.out.println("User registered!");
+//                return userRepository.save(user);
+//            } else {
+//                System.out.println("User with this email already exist!");
+//                throw new RuntimeException("User with this email already exist!");
+//            }
+//        } else{
+//            System.out.println("User with this name is already exist!");
+//            throw new RuntimeException("User with this name is already exist!");
+//        }
+
+        return userRepository.save(user);
     }
 
     public User updateUser(User user) {
