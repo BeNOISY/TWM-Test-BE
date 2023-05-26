@@ -1,26 +1,41 @@
 package com.docker.compose;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
+import org.thymeleaf.TemplateEngine;
+import org.thymeleaf.context.Context;
+
+import javax.mail.MessagingException;
+import javax.mail.internet.MimeMessage;
 
 @Service
 public class EmailSenderService {
-    @Autowired
+
     private JavaMailSender mailSender;
+    private TemplateEngine templateEngine;
 
-    public void sendSimpleEmail(String toEmail,
-                                String subject,
-                                String body
-    ) {
-        SimpleMailMessage message = new SimpleMailMessage();
-        message.setFrom("fromemail@gmail.com");
-        message.setTo(toEmail);
-        message.setText(body);
-        message.setSubject(subject);
-        mailSender.send(message);
-        System.out.println("Mail Send...");
+    @Autowired
+    public EmailSenderService(JavaMailSender mailSender, TemplateEngine templateEngine) {
+        this.mailSender = mailSender;
+        this.templateEngine = templateEngine;
     }
 
+    public void sendEmail(String recipientEmail, String subject, String templateName, Context context) {
+        MimeMessage message = mailSender.createMimeMessage();
+        MimeMessageHelper helper = new MimeMessageHelper(message);
+
+        try {
+            helper.setTo(recipientEmail);
+            helper.setSubject(subject);
+
+            String htmlContent = templateEngine.process(templateName, context);
+            helper.setText(htmlContent, true);
+
+            mailSender.send(message);
+        } catch (MessagingException e) {
+            // Handle exception appropriately
+        }
     }
+}
