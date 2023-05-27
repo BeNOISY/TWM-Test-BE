@@ -22,6 +22,9 @@ public class CartContoller {
     @Autowired
     private EmailSenderService senderService;
 
+
+
+
     @GetMapping("/cart")
     public ResponseEntity<List<Cart>> gerAllCart() {
         return ResponseEntity.ok().body(cartService.getAllCart());
@@ -32,16 +35,27 @@ public class CartContoller {
         return ResponseEntity.ok().body(cartService.getCartById(id));
     }
 
+    @GetMapping("/cart/user/{id}")
+    public ResponseEntity <List<Cart>> getCartByUserId(@PathVariable String userId){
+        return ResponseEntity.ok().body(this.cartService.getCartsByUserId(userId));
+    }
+
+
+
     @PostMapping("/cart")
     public ResponseEntity < Cart > createCart(@RequestBody Cart cart) {
         return ResponseEntity.ok().body(this.cartService.createCart(cart));
     }
+
+
 
     @PutMapping("/cart/{id}")
     public ResponseEntity < Cart > updateCart(@PathVariable String id, @RequestBody Cart cart) {
         cart.setId(id);
         return ResponseEntity.ok().body(this.cartService.updateCart(cart));
     }
+
+
 
     @DeleteMapping("/cart/{id}")
     public HttpStatus deleteCart(@PathVariable String id) {

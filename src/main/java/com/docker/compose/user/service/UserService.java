@@ -1,6 +1,7 @@
 package com.docker.compose.user.service;
 
 import com.docker.compose.exception.ResourceNotFoundException;
+import com.docker.compose.exception.WrongCredentialsException;
 import com.docker.compose.user.persistance.entity.User;
 import com.docker.compose.user.persistance.repository.UserRepository;
 import org.springframework.stereotype.Service;
@@ -19,20 +20,6 @@ public class UserService {
     }
 
     public User createUser(User user) {
-//        User userByUsername = getUserByUsername(user.getUsername());
-//        User userByEmail = getUserByEmail(user.getEmail());
-//        if(userByUsername == null){
-//            if(userByEmail == null){
-//                System.out.println("User registered!");
-//                return userRepository.save(user);
-//            } else {
-//                System.out.println("User with this email already exist!");
-//                throw new RuntimeException("User with this email already exist!");
-//            }
-//        } else{
-//            System.out.println("User with this name is already exist!");
-//            throw new RuntimeException("User with this name is already exist!");
-//        }
 
         return userRepository.save(user);
     }
@@ -55,19 +42,7 @@ public class UserService {
             userUpdate.setCity(user.getCity());
             userRepository.save(userUpdate);
 
-            User userByUsername = getUserByUsername(userUpdate.getUsername());
-            User userByEmail = getUserByEmail(userUpdate.getEmail());
-
-            if(userByUsername == null || Objects.equals(userUpdate.getUsername(), user.getUsername())){
-                if(userByEmail == null || Objects.equals(userUpdate.getEmail(), user.getEmail())){
-                    return userUpdate;
-                }else {
-                    throw new Error("User with this email already exist!");
-                }
-            }
-            else{
-                throw new Error("User with this name is already exist!");
-            }
+            return userUpdate;
         } else {
             throw new ResourceNotFoundException("Record not found with id : " + user.getId());
         }
@@ -89,11 +64,19 @@ public class UserService {
 
 
     public boolean loginUser(String email, String password) {
-
         User user = userRepository.findUserByEmail(email);
-        System.out.println("\nNajden user podla zadanej emailovej adresy:" + user + "\n");
-        System.out.println("Jeho heslo je: " + user.getPassword() + "\n");
-        return Objects.equals(user.getPassword(), password);
+        if(user != null) {
+            if (Objects.equals(user.getPassword(), password)) {
+                System.out.println("\nUser Found: " + user + "\n");
+                return Objects.equals(user.getPassword(), password);
+            } else {
+                throw new WrongCredentialsException("The password or email does not match!");
+
+            }
+        }
+        else {
+            throw new ResourceNotFoundException("User with this email address does not exist: " + email);
+        }
     }
 
     public User getUserByUsername(String username){
