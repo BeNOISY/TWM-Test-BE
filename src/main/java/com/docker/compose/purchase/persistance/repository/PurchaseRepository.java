@@ -6,5 +6,5 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import java.util.List;
 
 public interface PurchaseRepository extends MongoRepository<Purchase, String> {
-    List<Purchase> findPurchasesByUserId(String userId);
+    List<Purchase> findPurchasesByEmail(String email);
 }

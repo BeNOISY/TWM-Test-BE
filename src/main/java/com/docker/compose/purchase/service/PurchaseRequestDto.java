@@ -11,7 +11,7 @@ import java.util.List;
 public class PurchaseRequestDto {
 
     private String id;
-    private String userId;
+    private String email;
     private List<Product>   products;
     private float finalPrice;
     private String time;

@@ -27,9 +27,9 @@ public class PurchaseController {
         return ResponseEntity.ok().body(purchaseService.getPurchaseById(id));
     }
 
-    @GetMapping("purchase/user/{id}")
-    public ResponseEntity <List<Purchase>> getPurchaseByUserID(@PathVariable String userId){
-        return ResponseEntity.ok().body(purchaseService.getCartsByUserId(userId));
+    @GetMapping("purchase/user/{email}")
+    public ResponseEntity <List<Purchase>> getPurchaseByUserID(@PathVariable String email){
+        return ResponseEntity.ok().body(purchaseService.getCartsByEmail(email));
     }
 
     @PostMapping("/purchase")

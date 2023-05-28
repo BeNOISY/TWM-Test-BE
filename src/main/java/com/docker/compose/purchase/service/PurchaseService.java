@@ -38,8 +38,8 @@ public class PurchaseService {
         }
     }
 
-    public List<Purchase> getCartsByUserId(String userId){
-        Optional< List<Purchase>> purchasesByUser = Optional.ofNullable(this.purchaseRepository.findPurchasesByUserId(userId));
+    public List<Purchase> getCartsByEmail(String email){
+        Optional< List<Purchase>> purchasesByUser = Optional.ofNullable(this.purchaseRepository.findPurchasesByEmail(email));
 
         if(purchasesByUser.isEmpty()){
             throw new ResourceNotFoundException("User doesn't exist or does not have any purchases");
@@ -55,7 +55,7 @@ public class PurchaseService {
             Purchase purchaseUpdate = purchaseById.get();
 
             purchaseUpdate.setId(purchase.getId());
-            purchaseUpdate.setUserId(purchase.getUserId());
+            purchaseUpdate.setEmail(purchase.getEmail());
             purchaseUpdate.setTime(purchase.getTime());
             purchaseUpdate.setProducts(purchase.getProducts());
             purchaseUpdate.setFinalPrice(purchase.getFinalPrice());
