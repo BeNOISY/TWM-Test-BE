@@ -1,12 +1,12 @@
-//        User user = cart.getUser();
-//        List<Product> products = cart.getProducts();
+//        User user = purchase.getUser();
+//        List<Product> products = purchase.getProducts();
 //        ArrayList<String> finalProducts = new ArrayList<>();
 //        products.forEach(product -> {
 //            finalProducts.add(product.getName() + "\n");
 //            finalProducts.add((product.getPrice()) + "€\n");
 //        });
 //        senderService.sendSimpleEmail(user.getEmail(),
-//                "TWM Electronics receipt no.:" + cart.getTime(),
+//                "TWM Electronics receipt no.:" + purchase.getTime(),
 ////                "Hi " + user.getUsername() +"." +
 ////                        "\n" +
 ////                        "\n" +
@@ -19,8 +19,8 @@
 ////                        .replace("]", "")
 ////                        .replace(",","") +
 ////                        "\n" +
-////                        "Total price: " + cart.getFinalPrice()+ "€" +
-////                        "\nTime of purchase: " + cart.getTime() + "" +
+////                        "Total price: " + purchase.getFinalPrice()+ "€" +
+////                        "\nTime of purchase: " + purchase.getTime() + "" +
 ////                        "\n We send your purchase to: " + user.getAddress() + ", in: " + user.getCity() + "." +
 ////                        "\nTWM Electronics thank you for your purchase and hope that you will come again!"
 //
