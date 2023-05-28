@@ -24,6 +24,7 @@
         <option value="package-info" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -51,6 +52,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+<<<<<<< HEAD
+=======
+    "DefaultHtmlFileTemplate": "HTML File",
+>>>>>>> d87708da4106ae935b97283fc4bda995a00be370
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -59,7 +64,11 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "create.test.in.the.same.root": "true",
+<<<<<<< HEAD
     "last_opened_file_path": "C:/ALL/School/2.Rocnik/LS/Programovanie 3/git",
+=======
+    "last_opened_file_path": "C:/ALL/School/2.Rocnik/LS/Databazové Systémy/TWM-Test-BE",
+>>>>>>> d87708da4106ae935b97283fc4bda995a00be370
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -151,6 +160,7 @@
       <workItem from="1682253625477" duration="2484000" />
       <workItem from="1682256135415" duration="135000" />
       <workItem from="1682256315950" duration="3256000" />
+      <workItem from="1685140850245" duration="2030000" />
     </task>
     <servers />
   </component>
