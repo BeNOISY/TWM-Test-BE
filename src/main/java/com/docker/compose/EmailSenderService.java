@@ -13,8 +13,8 @@ import javax.mail.internet.MimeMessage;
 @Service
 public class EmailSenderService {
 
-    private JavaMailSender mailSender;
-    private TemplateEngine templateEngine;
+    private final JavaMailSender mailSender;
+    private final TemplateEngine templateEngine;
 
     @Autowired
     public EmailSenderService(JavaMailSender mailSender, TemplateEngine templateEngine) {
