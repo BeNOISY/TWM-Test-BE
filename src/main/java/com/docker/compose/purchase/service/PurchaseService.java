@@ -50,7 +50,7 @@ public class PurchaseService {
         }
     }
 
-    public List<Purchase> getCartsByEmail(String email){
+    public List<Purchase> getPurchaseByEmail(String email){
         Optional< List<Purchase>> purchasesByUser = Optional.ofNullable(this.purchaseRepository.findPurchasesByEmail(email));
 
         if(purchasesByUser.isEmpty()){

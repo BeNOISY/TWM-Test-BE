@@ -29,7 +29,7 @@ public class PurchaseController {
 
     @GetMapping("purchase/user/{email}")
     public ResponseEntity <List<Purchase>> getPurchaseByUserID(@PathVariable String email){
-        return ResponseEntity.ok().body(purchaseService.getCartsByEmail(email));
+        return ResponseEntity.ok().body(purchaseService.getPurchaseByEmail(email));
     }
 
     @PostMapping("/purchase")

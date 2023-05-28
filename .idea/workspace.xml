@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67d9f2dc-735c-4ec5-bd5e-8d8fdaf71a7c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/purchase/contoller/PurchaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/purchase/contoller/PurchaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/purchase/persistance/entity/Purchase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/purchase/persistance/entity/Purchase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/purchase/persistance/repository/PurchaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/purchase/persistance/repository/PurchaseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/purchase/service/PurchaseDetailDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/purchase/service/PurchaseDetailDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/purchase/service/PurchaseRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/purchase/service/PurchaseRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/purchase/service/PurchaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/purchase/service/PurchaseService.java" afterDir="false" />
-    </list>
+    <list default="true" id="67d9f2dc-735c-4ec5-bd5e-8d8fdaf71a7c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,37 +42,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-<<<<<<< HEAD
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
 =======
-    "DefaultHtmlFileTemplate": "HTML File",
->>>>>>> d87708da4106ae935b97283fc4bda995a00be370
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "create.test.in.the.same.root": "true",
-<<<<<<< HEAD
-    "last_opened_file_path": "C:/ALL/School/2.Rocnik/LS/Programovanie 3/git",
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; d87708da4106ae935b97283fc4bda995a00be370
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+    &quot;last_opened_file_path&quot;: &quot;C:/ALL/School/2.Rocnik/LS/Programovanie 3/git&quot;,
 =======
-    "last_opened_file_path": "C:/ALL/School/2.Rocnik/LS/Databazové Systémy/TWM-Test-BE",
->>>>>>> d87708da4106ae935b97283fc4bda995a00be370
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "spring.configuration.checksum": "47184ecc4670e8177a9475b8de79b3d8",
-    "vue.rearranger.settings.migration": "true"
+    &quot;last_opened_file_path&quot;: &quot;C:/ALL/School/2.Rocnik/LS/Databazové Systémy/TWM-Test-BE&quot;,
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; d87708da4106ae935b97283fc4bda995a00be370
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;47184ecc4670e8177a9475b8de79b3d8&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\ALL\School\2.Rocnik\LS\Databazové Systémy\TWM-Test-BE\src\main\java\com\docker\compose" />

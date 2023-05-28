@@ -13,9 +13,12 @@ public class Purchase {
 
     @Id
     private String id;
-    private String email;
     private List<Product>   products;
     private float finalPrice;
     private String time;
+
+    private String email;
+    private String name;
+    private String address;
 
 }
