@@ -5,17 +5,17 @@ import com.docker.compose.exception.ResourceNotFoundException;
 import com.docker.compose.purchase.persistance.entity.Purchase;
 import com.docker.compose.purchase.persistance.repository.PurchaseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import java.util.Optional;
 import java.util.List;
-
+@Service
 public class PurchaseService {
 
     public PurchaseService(PurchaseRepository purchaseRepository){
         this.purchaseRepository = purchaseRepository;
     }
 
-    @Autowired
-    private EmailSenderService emailSenderService;
     @Autowired
     private final PurchaseRepository purchaseRepository;
 
