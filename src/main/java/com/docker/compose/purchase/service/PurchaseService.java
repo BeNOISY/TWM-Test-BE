@@ -1,20 +1,18 @@
 package com.docker.compose.purchase.service;
 
-import com.docker.compose.EmailSenderService;
+import com.docker.compose.email.entity.EmailDetails;
+import com.docker.compose.email.service.EmailService;
 import com.docker.compose.exception.ResourceNotFoundException;
 import com.docker.compose.purchase.persistance.entity.Purchase;
 import com.docker.compose.purchase.persistance.repository.PurchaseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.thymeleaf.context.Context;
 
 import java.util.Optional;
 import java.util.List;
 @Service
 public class PurchaseService {
 
-    @Autowired
-    private EmailSenderService emailService;
 
     public PurchaseService(PurchaseRepository purchaseRepository){
         this.purchaseRepository = purchaseRepository;
@@ -23,15 +21,10 @@ public class PurchaseService {
     @Autowired
     private final PurchaseRepository purchaseRepository;
 
+    @Autowired
+    private EmailService emailService;
+
     public Purchase createPurchase(Purchase purchase){
-        String recipientEmail = "dian.pato66@gmail.com";
-        String subject = "Hello from Spring Boot";
-        String templateName = "email-template";
-
-        Context context = new Context();
-        // Add any necessary variables to the context
-
-        emailService.sendEmail(recipientEmail, subject, templateName, context);
         return purchaseRepository.save(purchase);
     }
 

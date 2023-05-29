@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67d9f2dc-735c-4ec5-bd5e-8d8fdaf71a7c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/EmailSenderService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/purchase/contoller/PurchaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/purchase/contoller/PurchaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docker/compose/purchase/service/PurchaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docker/compose/purchase/service/PurchaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/email-template.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/thymeleafTemplate.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +23,8 @@
       <list>
         <option value="package-info" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
